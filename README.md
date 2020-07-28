@@ -17,7 +17,17 @@ Project set up with Vue CLI using
 
 ## Start project
 
+Development
+
 ````bash
  cd produktselektor-breitband
  yarn serve
  ````
+
+Standalone web app
+
+````bash
+yarn build
+cd dist
+php -S localhost:8080
+`````
