@@ -22,7 +22,7 @@ Development
 
 ````bash
  cd produktselektor-breitband
- yarn serve
+ npm run serve
  ````
 
  or with GUI
@@ -36,7 +36,7 @@ Development
 Standalone web app
 
 ````bash
-yarn build
+npm run build
 cd dist
 php -S localhost:8080
 `````
@@ -50,3 +50,10 @@ Vuetify, [Getting Started](https://vuetifyjs.com/en/getting-started/quick-start/
 or rather 
 
 Tailwind CSS
+
+
+## initial Project Setup
+
+Project initialized with ```vue create``` and custom setup (VueX, VueRouter, PWA, Lint-on-Save with Prettier).
+
+[Manual addition](https://markus.oberlehner.net/blog/setting-up-tailwind-css-with-vue/#writing-purgeable-vue-components) of Tailwind and PurgeCSS.
