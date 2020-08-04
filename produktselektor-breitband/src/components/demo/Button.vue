@@ -1,5 +1,5 @@
 <template>
-  <div class="button-demo">
+  <div class="button-demo my-5">
     <a
       :href="href"
       class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
