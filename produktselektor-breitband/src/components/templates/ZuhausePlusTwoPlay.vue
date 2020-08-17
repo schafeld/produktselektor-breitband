@@ -4,7 +4,9 @@
       <h2 class="product-title text-vodafone-red font-bold">
         ZuhausePlusTwoPlay
       </h2>
-      <p class="font-medium">Aktives Produkt: {{ $store.getters.getActiveProduct[0] }}</p>
+      <p class="font-medium">
+        Aktives Produkt: {{ $store.getters.getActiveProduct[0] }}
+      </p>
     </div>
     <div id="product-selector" class="w-1/3">
       <p>Todo: Add Product selection</p>
