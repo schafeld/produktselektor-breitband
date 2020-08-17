@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'light': ['VodafoneLt'],
-      'regular': ['VodafoneRg'],
+      'medium': ['VodafoneRg'],
       'bold': ['VodafoneBd']
     },
     extend: {
