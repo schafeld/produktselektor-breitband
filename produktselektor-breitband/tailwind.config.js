@@ -6,6 +6,11 @@ module.exports = {
     './src/**/*.vue'
   ],
   theme: {
+    fontFamily: {
+      'light': ['VodafoneLt'],
+      'regular': ['VodafoneRg'],
+      'bold': ['VodafoneBd']
+    },
     extend: {
       /* Extend Tailwind with custom css for Vodafone theme. */
       colors: {
