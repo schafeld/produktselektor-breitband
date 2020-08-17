@@ -1,5 +1,5 @@
-
-:root {
+/* Custom theme colors moved to tailwind.config.js */
+/* :root {
   --color-vodafone-grey: #4A4D4E;
   --color-vodafone-red: #e60000;
   --color-vodafone-white: #ffffff;
@@ -9,14 +9,14 @@
   --color-vodafone-turqoise: #007C92;
   --color-vodafone-red-violet: #9C2AA0;
   --color-vodafone-spring-green: #A8B400;
-  --color-vodafone-frash-orange: #eb9700;
+  --color-vodafone-fresh-orange: #eb9700;
   --color-vodafone-lemon-yellow: #fecb00;
   --color-vodafone-dark-grey: #333333;
   --color-vodafone-anthrazite: #666666;
   --color-vodafone-mid-grey: #999999;
   --color-vodafone-platinum: #afafaf;
   --color-vodafone-silver: #cccccc;
-  --color-vodafone-aluminium: #ebebeb;
+  --color-vodafone-aluminum: #ebebeb;
   --color-vodafone-light-grey: #f4f4f4;
   --color-digital-green: #428600;
   --color-digital-dark-red-2: #820000;
@@ -30,7 +30,7 @@
   --color-info-orange: #ff5400;
   --color-alert-warning: #fff5f0;
   --color-info: #ffffff;
-}
+} */
 
 /* TODO: Use fonts from Vodafone website */
 @font-face {
