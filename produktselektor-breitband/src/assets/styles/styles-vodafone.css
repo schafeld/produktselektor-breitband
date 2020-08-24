@@ -72,6 +72,13 @@
 }
 
 .btn {
+  /* TODO: Refactor */
   @apply px-4 py-2 m-3 text-white bg-red-500 rounded-md inline-block;
   cursor:pointer
+}
+
+/* Class names adopted from Vodafone's ZuhausePlus website */
+.hl-beta {
+  @apply text-lg;
+  font-weight: bold;
 }
