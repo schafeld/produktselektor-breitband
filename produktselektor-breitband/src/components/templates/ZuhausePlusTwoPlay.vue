@@ -60,6 +60,8 @@
         </article>
       </section>
       <additional-options />
+      <tariff-comparison />
+      <tariff-details />
     </div>
     <div id="product-selector" class="w-1/3">
       <p>Todo: Add Product selection</p>
@@ -71,11 +73,15 @@
 
 <script>
 import AdditionalOptions from "@/components/organisms/AdditionalOptions";
+import TariffComparison from "@/components/organisms/TariffComparison";
+import TariffDetails from "@/components/organisms/TariffDetails";
 
 export default {
   name: "LayoutIntegrator",
   components: {
-    AdditionalOptions
+    AdditionalOptions,
+    TariffComparison,
+    TariffDetails
   }
 };
 </script>
