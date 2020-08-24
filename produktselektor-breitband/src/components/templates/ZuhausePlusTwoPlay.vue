@@ -59,6 +59,7 @@
           </div>
         </article>
       </section>
+      <additional-options />
     </div>
     <div id="product-selector" class="w-1/3">
       <p>Todo: Add Product selection</p>
@@ -69,6 +70,12 @@
 </template>
 
 <script>
-// export default {
-// }
+import AdditionalOptions from "@/components/organisms/AdditionalOptions";
+
+export default {
+  name: "LayoutIntegrator",
+  components: {
+    AdditionalOptions
+  }
+};
 </script>
