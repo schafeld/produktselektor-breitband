@@ -1,6 +1,11 @@
 <template>
-  <div id="panel-layout-two-play" class="flex h-full">
-    <div id="main-content" class="w-2/3 bg-gray-200">
+  <div id="panel-layout-two-play" class="flex flex-col md:flex-row h-full">
+    <div class="mobile product-selector visible w-full md:in-visible md:w-0">
+      <p>Todo: Add Product selection for mobile</p>
+      <div class="btn">Klick</div>
+      <p class="text-info bg-vodafone-red inline-block px-2">Mobile</p>
+    </div>
+    <div class="main-content w-full md:w-2/3 bg-gray-200">
       <h2 class="product-title text-vodafone-red font-bold">
         ZuhausePlusTwoPlay
       </h2>
@@ -63,10 +68,10 @@
       <tariff-comparison />
       <tariff-details />
     </div>
-    <div id="product-selector" class="w-1/3">
-      <p>Todo: Add Product selection</p>
+    <div class="desktop product-selector invisible w-0 md:visible md:w-1/3">
+      <p>Todo: Add Product selection for desktop</p>
       <div class="btn">Klick</div>
-      <p class="text-info bg-vodafone-red inline-block px-2">Roter Text</p>
+      <p class="text-info bg-vodafone-red inline-block px-2">Desktop</p>
     </div>
   </div>
 </template>
