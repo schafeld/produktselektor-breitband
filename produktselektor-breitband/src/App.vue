@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="antialiased text-gray-900">
-    <div id="nav">
+    <div id="nav" class="sticky top-0 bg-white">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/internet-phone-250">2Play Topseller</router-link> |
