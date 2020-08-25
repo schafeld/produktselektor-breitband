@@ -24,7 +24,10 @@
               <span
                 class="productCart-label productCart-label--bandwidth text--bold"
                 :class="selectedTariff === '2P_RIP_50_1' ? 'isSelected' : null"
-                @click="selectedTariff = '2P_RIP_50_1'; trackTabInteraction(['2P_RIP_50_1'], environment)"
+                @click="
+                  selectedTariff = '2P_RIP_50_1';
+                  trackTabInteraction(['2P_RIP_50_1'], environment);
+                "
               >
                 <span class="download-speed">50</span> Mbit/s
               </span>
@@ -38,7 +41,10 @@
               <span
                 class="productCart-label productCart-label--bandwidth text--bold"
                 :class="selectedTariff === '2P_RIP_100_1' ? 'isSelected' : null"
-                @click="selectedTariff = '2P_RIP_100_1'; trackTabInteraction(['2P_RIP_100_1'], environment)"
+                @click="
+                  selectedTariff = '2P_RIP_100_1';
+                  trackTabInteraction(['2P_RIP_100_1'], environment);
+                "
               >
                 <span class="download-speed">100</span> Mbit/s
               </span>
@@ -52,7 +58,10 @@
               <span
                 class="productCart-label productCart-label--bandwidth"
                 :class="isTopseller ? 'isSelected' : null"
-                @click="selectedTariff = '2P_RIP_250_1'; trackTabInteraction(['2P_RIP_250_1'], environment)"
+                @click="
+                  selectedTariff = '2P_RIP_250_1';
+                  trackTabInteraction(['2P_RIP_250_1'], environment);
+                "
               >
                 <span class="download-speed">250</span> Mbit/s
               </span>
@@ -66,7 +75,10 @@
               <span
                 class="productCart-label productCart-label--bandwidth"
                 :class="selectedTariff === '2P_RIP_500_1' ? 'isSelected' : null"
-                @click="selectedTariff = '2P_RIP_500_1'; trackTabInteraction(['2P_RIP_500_1'], environment)"
+                @click="
+                  selectedTariff = '2P_RIP_500_1';
+                  trackTabInteraction(['2P_RIP_500_1'], environment);
+                "
               >
                 <span class="download-speed">500</span> Mbit/s
               </span>
@@ -99,9 +111,10 @@
       <details-rib-250 v-else-if="selectedTariff === '2P_RIP_250_1'" />
       <details-rib-500 v-else-if="selectedTariff === '2P_RIP_500_1'" />
       <details-rib-1000 v-else-if="selectedTariff === '2P_RIP_1000_1'" />-->
-      <div
-        class="DEBUG"
-      >xxx {{ $store.getters.getActiveProduct[0] }} | {{ $store.getters.getProduct($store.getters.getActiveProduct).title }}</div>
+      <div class="DEBUG">
+        xxx {{ $store.getters.getActiveProduct[0] }} which is
+        {{ $store.getters.getProduct($store.getters.getActiveProduct).title }}
+      </div>
     </div>
   </div>
 </template>
@@ -121,7 +134,10 @@ export default {
   },
   computed: {
     isTopseller() {
-      return this.selectedTariff === '2P_RIP_250_1' || this.$store.getters.getActiveProduct[0] ===  '2P_RIP_250_1';
+      return (
+        this.selectedTariff === "2P_RIP_250_1" ||
+        this.$store.getters.getActiveProduct[0] === "2P_RIP_250_1"
+      );
     }
   }
 };

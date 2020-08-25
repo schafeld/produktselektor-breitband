@@ -69,10 +69,7 @@
       <tariff-details />
     </div>
     <div class="desktop product-selector invisible w-0 md:visible md:w-1/3">
-    <sidebar-desktop />
-      <!-- <p>Todo: Add Product selection for desktop</p>
-      <div class="btn">Klick</div>
-      <p class="text-info bg-vodafone-red inline-block px-2">Desktop</p> -->
+      <sidebar-desktop />
     </div>
   </div>
 </template>
