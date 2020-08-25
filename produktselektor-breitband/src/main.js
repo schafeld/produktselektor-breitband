@@ -7,6 +7,14 @@ import "./assets/styles/index.css";
 
 Vue.config.productionTip = false;
 
+Vue.mixin({
+  data() {
+    return {
+      environment: process.env.NODE_ENV
+    }
+  }
+});
+
 new Vue({
   router,
   store,
