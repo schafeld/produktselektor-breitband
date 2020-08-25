@@ -69,9 +69,10 @@
       <tariff-details />
     </div>
     <div class="desktop product-selector invisible w-0 md:visible md:w-1/3">
-      <p>Todo: Add Product selection for desktop</p>
+    <sidebar-desktop />
+      <!-- <p>Todo: Add Product selection for desktop</p>
       <div class="btn">Klick</div>
-      <p class="text-info bg-vodafone-red inline-block px-2">Desktop</p>
+      <p class="text-info bg-vodafone-red inline-block px-2">Desktop</p> -->
     </div>
   </div>
 </template>
@@ -80,13 +81,15 @@
 import AdditionalOptions from "@/components/organisms/AdditionalOptions";
 import TariffComparison from "@/components/organisms/TariffComparison";
 import TariffDetails from "@/components/organisms/TariffDetails";
+import SidebarDesktop from "@/components/organisms/productselection/SidebarDesktop";
 
 export default {
   name: "LayoutIntegrator",
   components: {
     AdditionalOptions,
     TariffComparison,
-    TariffDetails
+    TariffDetails,
+    SidebarDesktop
   }
 };
 </script>
