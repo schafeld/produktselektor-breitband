@@ -10,29 +10,33 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "home",
-    component:
-      store.getters.getLastSeenProduct.length > 1
-        ? ZuhausePlusThreePlay
-        : ZuhausePlusTwoPlay,
-    meta: {
-      title: "Internet, Telefon und Kabelfernsehen von Vodafone"
-    },
-    props: {
-      default: true,
-      activeProduct:
-        store.getters.getLastSeenProduct !== ""
-          ? store.getters.getLastSeenProduct
-          : ["2P_RIP_250_1"]
-    },
-    beforeEnter(to, from, next) {
-      if (store.getters.getLastSeenProduct !== "") {
-        store.dispatch("setActiveProduct", store.getters.getLastSeenProduct);
-      } else {
-        store.dispatch("setActiveProduct", ["2P_RIP_250_1"]);
-      }
-      next();
-    }
+    redirect: "/internet-phone-250", // 250 as default; TODO: refactor for 3play?
+    name: "home"
+    // component:
+    //   store.getters.getLastSeenProduct.length > 1
+    //     ? ZuhausePlusThreePlay
+    //     : ZuhausePlusTwoPlay,
+    // meta: {
+    //   title: "Internet, Telefon und Kabelfernsehen von Vodafone"
+    // },
+    // props: {
+    //   default: true,
+    //   // Why was this in ZH+ used?
+    //   activeProduct:
+    //     store.getters.getLastSeenProduct !== ""
+    //       ? store.getters.getLastSeenProduct
+    //       : ["2P_RIP_250_1"]
+    //   // instead of this:
+    //   // activeProduct: ["2P_RIP_250_1", "HRZ_TV_0420_1"]
+    // },
+    // beforeEnter(to, from, next) {
+    //   if (store.getters.getLastSeenProduct !== "") {
+    //     store.dispatch("setActiveProduct", store.getters.getLastSeenProduct);
+    //   } else {
+    //     store.dispatch("setActiveProduct", ["2P_RIP_250_1"]);
+    //   }
+    //   next();
+    // }
   },
   {
     path: "/internet-phone-tv-1000",
