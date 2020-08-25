@@ -1,9 +1,7 @@
 <template>
   <div id="panel-layout-two-play" class="flex flex-col md:flex-row h-full">
     <div class="mobile product-selector visible w-full md:in-visible md:w-0">
-      <p>Todo: Add Product selection for mobile</p>
-      <div class="btn">Klick</div>
-      <p class="text-info bg-vodafone-red inline-block px-2">Mobile</p>
+      <tabs-mobile />
     </div>
     <div class="main-content w-full md:w-2/3 bg-gray-200">
       <h2 class="product-title text-vodafone-red font-bold">
@@ -79,6 +77,7 @@ import AdditionalOptions from "@/components/organisms/AdditionalOptions";
 import TariffComparison from "@/components/organisms/TariffComparison";
 import TariffDetails from "@/components/organisms/TariffDetails";
 import SidebarDesktop from "@/components/organisms/productselection/SidebarDesktop";
+import TabsMobile from "@/components/organisms/productselection/TabsMobile";
 
 export default {
   name: "LayoutIntegrator",
@@ -86,7 +85,8 @@ export default {
     AdditionalOptions,
     TariffComparison,
     TariffDetails,
-    SidebarDesktop
+    SidebarDesktop,
+    TabsMobile
   }
 };
 </script>
