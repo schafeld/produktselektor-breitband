@@ -66,7 +66,9 @@
       <tariff-comparison />
       <tariff-details />
     </div>
-    <div class="desktop product-selector invisible w-0 md:visible md:w-1/3 fixed right-0 top-10">
+    <div
+      class="desktop product-selector invisible w-0 md:visible md:w-1/3 fixed right-0 top-10"
+    >
       <sidebar-desktop />
     </div>
   </div>
