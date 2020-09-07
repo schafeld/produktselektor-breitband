@@ -2,8 +2,8 @@
   <div class="banner-vodafone cockpit-background p-6">
     <h1>Unitymedia ist jetzt Vodafone</h1>
     <p class="sub-line">
-      Entdecke Highspeed-Internet &amp; Phone Tarife, TV und
-      Mobilfunk im ausgezeichneten Vodafone-Netz!
+      Entdecke Highspeed-Internet &amp; Phone Tarife, TV und Mobilfunk im
+      ausgezeichneten Vodafone-Netz!
     </p>
     <a
       href="https://www.vodafone.de"
@@ -11,7 +11,11 @@
       target="_blank"
     >
       <span class="text mr-2">Zu vodafone.de</span>
-      <svg id="i-arrow-ws2-right-sml" class="invisible md:visible md:desktop" viewBox="0 0 100 100">
+      <svg
+        id="i-arrow-ws2-right-sml"
+        class="invisible md:visible md:desktop"
+        viewBox="0 0 100 100"
+      >
         <path
           d="M91.507 50.797c.029-.069.045-.141.066-.212.017-.059.04-.116.052-.177.027-.135.041-.271.041-.408v-.001c0-.136-.014-.272-.041-.407-.012-.062-.035-.119-.053-.178-.021-.071-.037-.142-.065-.21-.029-.07-.069-.133-.105-.199-.029-.053-.052-.108-.087-.159a2.087 2.087 0 0 0-.26-.318L55.64 13.11a2.084 2.084 0 0 0-2.946 2.946l31.86 31.86H10.417a2.083 2.083 0 1 0 0 4.166h74.137l-31.86 31.86a2.082 2.082 0 1 0 2.946 2.946l35.415-35.415c.097-.097.184-.204.261-.319.034-.05.057-.105.086-.158.036-.065.076-.129.105-.199z"
           class="st0"
@@ -62,13 +66,13 @@
   }
   .ws2-btn {
     position: relative;
-    font-family: "Vodafone",Arial,sans-serif;
+    font-family: "Vodafone", Arial, sans-serif;
     font-size: 16px;
     line-height: 22px;
     font-weight: bold;
     padding: 12px 20px 14px;
     height: 46px;
-    box-shadow: 0 1px 3px rgba(50,50,50,0.6);
+    box-shadow: 0 1px 3px rgba(50, 50, 50, 0.6);
     display: inline-flex;
     width: fit-content;
     text-decoration: none;
