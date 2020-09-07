@@ -1,10 +1,7 @@
 <template>
   <div id="app" class="antialiased text-gray-900">
-    <div id="nav" class="sticky top-0 bg-white">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/internet-phone-250">2Play Topseller</router-link> |
-      <router-link to="/internet-phone-tv-250">3Play Topseller</router-link>
+    <div id="banner-top" class="sticky top-0 bg-white">
+      <banner-vodafone />
     </div>
     <router-view />
   </div>
@@ -12,32 +9,12 @@
 
 <script>
 import "@/assets/styles/styles-vodafone.css";
+import BannerVodafone from "@/components/organisms/BannerVodafone";
 
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    BannerVodafone
+  }
 };
 </script>
-
-<style lang="scss">
-// #app {
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-//   background: #dddddd;
-// }
-
-// #nav {
-//   padding: 30px;
-
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
-</style>
