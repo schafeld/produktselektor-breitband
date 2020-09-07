@@ -13,7 +13,7 @@
       <span class="text mr-2">Zu vodafone.de</span>
       <svg
         id="i-arrow-ws2-right-sml"
-        class="invisible md:visible md:desktop"
+        class="invisible md:visible md:w-4"
         viewBox="0 0 100 100"
       >
         <path
@@ -88,9 +88,6 @@
       fill: var(--color-vodafone-dark-grey);
       stroke: var(--color-vodafone-dark-grey);
       stroke-width: 2px;
-    }
-    .desktop {
-      width: 23px;
     }
   }
 }
