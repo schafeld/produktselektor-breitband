@@ -69,7 +69,8 @@
           </div>
         </div>
 
-        <div class="mb--s">
+        <!-- No 500 in CableMax -->
+        <!-- <div class="mb--s">
           <div class="productCart-radio">
             <router-link to="/internet-phone-500">
               <span
@@ -84,7 +85,7 @@
               </span>
             </router-link>
           </div>
-        </div>
+        </div> -->
 
         <div class="mb--s">
           <div class="productCart-radio">
