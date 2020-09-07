@@ -1,0 +1,84 @@
+/* Custom theme colors moved to tailwind.config.js */
+/* :root {
+  --color-vodafone-grey: #4A4D4E;
+  --color-vodafone-red: #e60000;
+  --color-vodafone-white: #ffffff;
+  --color-vodafone-black: #000000;
+  --color-vodafone-aqua-blue: #00B0CA;
+  --color-vodafone-aubergine: #5E2750;
+  --color-vodafone-turqoise: #007C92;
+  --color-vodafone-red-violet: #9C2AA0;
+  --color-vodafone-spring-green: #A8B400;
+  --color-vodafone-fresh-orange: #eb9700;
+  --color-vodafone-lemon-yellow: #fecb00;
+  --color-vodafone-dark-grey: #333333;
+  --color-vodafone-anthrazite: #666666;
+  --color-vodafone-mid-grey: #999999;
+  --color-vodafone-platinum: #afafaf;
+  --color-vodafone-silver: #cccccc;
+  --color-vodafone-aluminum: #ebebeb;
+  --color-vodafone-light-grey: #f4f4f4;
+  --color-digital-green: #428600;
+  --color-digital-dark-red-2: #820000;
+  --color-digital-maroon: #990000;
+  --color-digital-dark-red: #bd0000;
+  --color-digital-red: #ff0000;
+  --color-confirmation-green: #427d00;
+  --color-info-tooltip: #f1f8f9;
+  --color-alert-success: #f4f7f0;
+  --color-alert-error: #FEF0F0;
+  --color-info-orange: #ff5400;
+  --color-alert-warning: #fff5f0;
+  --color-info: #ffffff;
+} */
+
+/* TODO: Use fonts from Vodafone website */
+@font-face {
+  font-family: "VodafoneLt";
+  src: url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneLt.eot");
+  src: local("VodafoneLt"),
+    url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneLt.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneLt.woff")
+      format("woff"),
+    url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneLt.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "VodafoneRg";
+  src: url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneRg.eot");
+  src: local("VodafoneRg"),
+    url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneRg.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneRg.woff")
+      format("woff"),
+    url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneRg.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "VodafoneBd";
+  src: url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneRg-Bold.ttf");
+  src: local("VodafoneRg"),
+    url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneRg-Bold.woff")
+      format("woff"),
+    url("https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/shop/fonts/VodafoneRg-Bold.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.btn {
+  /* TODO: Refactor */
+  @apply px-4 py-2 m-3 text-white bg-red-500 rounded-md inline-block;
+  cursor:pointer
+}
+
+/* Class names adopted from Vodafone's ZuhausePlus website */
+.hl-beta {
+  @apply text-lg;
+  font-weight: bold;
+}
