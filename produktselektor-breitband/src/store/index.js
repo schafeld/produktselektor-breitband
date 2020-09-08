@@ -497,7 +497,8 @@ export default new Vuex.Store({
     ],
     activeProduct: [],
     basket: [],
-    loggedInCostumer: false
+    loggedInCostumer: false, // truly logged-in customer (used only in Fallback Shop, not in widgets so far)
+    existingCustomer: false // not checked, just assumed because clicked/chosen by visitor
   },
   getters: {
     getProducts(state) {
@@ -579,8 +580,11 @@ export default new Vuex.Store({
       }
       return skuString;
     },
-    isExistingCustomer: state => {
+    isLoggedInCustomer: state => {
       return state.loggedInCostumer;
+    },
+    isExistingCustomer: state => {
+      return state.existingCustomer;
     },
     getLastSeenProduct: state => {
       return state.lastSeenProduct;
@@ -608,8 +612,11 @@ export default new Vuex.Store({
         getters.getBasketSkuString
       );
     },
-    setExistingCustomer(state) {
+    setLoggedInCustomer(state) {
       state.loggedInCostumer = true;
+    },
+    setExistingCustomer(state, payload) {
+      state.existingCustomer = payload;
     },
     setLastSeenProduct(state, payload) {
       state.lastSeenProduct = payload;
