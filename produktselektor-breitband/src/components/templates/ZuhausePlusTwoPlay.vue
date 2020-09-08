@@ -66,8 +66,9 @@
       <tariff-comparison />
       <tariff-details />
     </div>
+    <!-- Make this div 'fixed' for a sticky sidebar menu. -->
     <div
-      class="desktop product-selector invisible w-0 md:visible md:w-1/3 fixed right-0 top-10"
+      class="desktop product-selector invisible w-0 md:visible md:w-1/3 right-0 top-10"
     >
       <sidebar-desktop />
     </div>
