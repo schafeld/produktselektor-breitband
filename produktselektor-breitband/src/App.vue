@@ -25,6 +25,9 @@ export default {
 </script>
 
 <style>
+#app {
+  overflow-x: hidden;
+}
 #banner-top {
   z-index: 10;
 }
