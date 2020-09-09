@@ -55,7 +55,8 @@
       </span>
     </router-link>
 
-    <router-link to="/internet-phone-500">
+    <!-- No 500 MBit for CableMax -->
+    <!-- <router-link to="/internet-phone-500">
       <span
         class="btn-tab-mobile"
         :class="selectedTariff === '2P_RIP_500_1' ? 'isSelected' : null"
@@ -66,7 +67,7 @@
       >
         <span class="download-speed">500</span> Mbit/s
       </span>
-    </router-link>
+    </router-link> -->
 
     <router-link to="/internet-phone-1000">
       <span

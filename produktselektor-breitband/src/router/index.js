@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 // import Home from "../views/Home.vue";
 import store from "@/store/index";
 import ZuhausePlusTwoPlay from "@/components/templates/ZuhausePlusTwoPlay.vue";
-import ZuhausePlusThreePlay from "@/components/templates/ZuhausePlusThreePlay.vue";
+// import ZuhausePlusThreePlay from "@/components/templates/ZuhausePlusThreePlay.vue";
 
 Vue.use(VueRouter);
 
@@ -38,86 +38,87 @@ const routes = [
     //   next();
     // }
   },
-  {
-    path: "/internet-phone-tv-1000",
-    name: "three-play-internet-phone-tv-1000",
-    component: ZuhausePlusThreePlay,
-    meta: {
-      title: "Red Internet und Telefon 1000 Cable mit TV"
-    },
-    props: {
-      default: true,
-      activeProduct: ["2P_RIP_1000_1", "HRZ_TV_0420_1"]
-    },
-    beforeEnter(to, from, next) {
-      store.dispatch("setActiveProduct", ["2P_RIP_1000_1", "HRZ_TV_0420_1"]);
-      next();
-    }
-  },
-  {
-    path: "/internet-phone-tv-500",
-    name: "three-play-internet-phone-tv-500",
-    component: ZuhausePlusThreePlay,
-    meta: {
-      title: "Red Internet und Telefon 500 Cable mit TV"
-    },
-    props: {
-      default: true,
-      activeProduct: ["2P_RIP_500_1", "HRZ_TV_0420_1"]
-    },
-    beforeEnter(to, from, next) {
-      store.dispatch("setActiveProduct", ["2P_RIP_500_1", "HRZ_TV_0420_1"]);
-      next();
-    }
-  },
-  {
-    path: "/internet-phone-tv-250",
-    name: "three-play-internet-phone-tv-250",
-    component: ZuhausePlusThreePlay,
-    meta: {
-      title: "Red Internet und Telefon 250 Cable mit TV"
-    },
-    props: {
-      default: true,
-      activeProduct: ["2P_RIP_250_1", "HRZ_TV_0420_1"]
-    },
-    beforeEnter(to, from, next) {
-      store.dispatch("setActiveProduct", ["2P_RIP_250_1", "HRZ_TV_0420_1"]);
-      next();
-    }
-  },
-  {
-    path: "/internet-phone-tv-100",
-    name: "Red Internet and Phone Cable 100 mit Horizon TV",
-    component: ZuhausePlusThreePlay,
-    meta: {
-      title: "Red Internet and Phone Cable 100"
-    },
-    props: {
-      default: true,
-      activeProduct: ["2P_RIP_100_1", "HRZ_TV_0420_1"]
-    },
-    beforeEnter(to, from, next) {
-      store.dispatch("setActiveProduct", ["2P_RIP_100_1", "HRZ_TV_0420_1"]);
-      next();
-    }
-  },
-  {
-    path: "/internet-phone-tv-50",
-    name: "three-play-internet-phone-tv-50",
-    component: ZuhausePlusThreePlay,
-    meta: {
-      title: "Red Internet und Telefon 50 Cable mit TV"
-    },
-    props: {
-      default: true,
-      activeProduct: ["2P_RIP_50_1", "HRZ_TV_0420_1"]
-    },
-    beforeEnter(to, from, next) {
-      store.dispatch("setActiveProduct", ["2P_RIP_50_1", "HRZ_TV_0420_1"]);
-      next();
-    }
-  },
+  // No ThreePlay in this project
+  // {
+  //   path: "/internet-phone-tv-1000",
+  //   name: "three-play-internet-phone-tv-1000",
+  //   component: ZuhausePlusThreePlay,
+  //   meta: {
+  //     title: "Red Internet und Telefon 1000 Cable mit TV"
+  //   },
+  //   props: {
+  //     default: true,
+  //     activeProduct: ["2P_RIP_1000_1", "HRZ_TV_0420_1"]
+  //   },
+  //   beforeEnter(to, from, next) {
+  //     store.dispatch("setActiveProduct", ["2P_RIP_1000_1", "HRZ_TV_0420_1"]);
+  //     next();
+  //   }
+  // },
+  // {
+  //   path: "/internet-phone-tv-500",
+  //   name: "three-play-internet-phone-tv-500",
+  //   component: ZuhausePlusThreePlay,
+  //   meta: {
+  //     title: "Red Internet und Telefon 500 Cable mit TV"
+  //   },
+  //   props: {
+  //     default: true,
+  //     activeProduct: ["2P_RIP_500_1", "HRZ_TV_0420_1"]
+  //   },
+  //   beforeEnter(to, from, next) {
+  //     store.dispatch("setActiveProduct", ["2P_RIP_500_1", "HRZ_TV_0420_1"]);
+  //     next();
+  //   }
+  // },
+  // {
+  //   path: "/internet-phone-tv-250",
+  //   name: "three-play-internet-phone-tv-250",
+  //   component: ZuhausePlusThreePlay,
+  //   meta: {
+  //     title: "Red Internet und Telefon 250 Cable mit TV"
+  //   },
+  //   props: {
+  //     default: true,
+  //     activeProduct: ["2P_RIP_250_1", "HRZ_TV_0420_1"]
+  //   },
+  //   beforeEnter(to, from, next) {
+  //     store.dispatch("setActiveProduct", ["2P_RIP_250_1", "HRZ_TV_0420_1"]);
+  //     next();
+  //   }
+  // },
+  // {
+  //   path: "/internet-phone-tv-100",
+  //   name: "Red Internet and Phone Cable 100 mit Horizon TV",
+  //   component: ZuhausePlusThreePlay,
+  //   meta: {
+  //     title: "Red Internet and Phone Cable 100"
+  //   },
+  //   props: {
+  //     default: true,
+  //     activeProduct: ["2P_RIP_100_1", "HRZ_TV_0420_1"]
+  //   },
+  //   beforeEnter(to, from, next) {
+  //     store.dispatch("setActiveProduct", ["2P_RIP_100_1", "HRZ_TV_0420_1"]);
+  //     next();
+  //   }
+  // },
+  // {
+  //   path: "/internet-phone-tv-50",
+  //   name: "three-play-internet-phone-tv-50",
+  //   component: ZuhausePlusThreePlay,
+  //   meta: {
+  //     title: "Red Internet und Telefon 50 Cable mit TV"
+  //   },
+  //   props: {
+  //     default: true,
+  //     activeProduct: ["2P_RIP_50_1", "HRZ_TV_0420_1"]
+  //   },
+  //   beforeEnter(to, from, next) {
+  //     store.dispatch("setActiveProduct", ["2P_RIP_50_1", "HRZ_TV_0420_1"]);
+  //     next();
+  //   }
+  // },
   {
     path: "/internet-phone-1000",
     name: "two-play-internet-phone-1000",
@@ -134,22 +135,23 @@ const routes = [
       next();
     }
   },
-  {
-    path: "/internet-phone-500",
-    name: "two-play-internet-phone-500",
-    component: ZuhausePlusTwoPlay,
-    meta: {
-      title: "Red Internet und Telefon 500 Cable"
-    },
-    props: {
-      default: true,
-      activeProduct: ["2P_RIP_500_1"]
-    },
-    beforeEnter(to, from, next) {
-      store.dispatch("setActiveProduct", ["2P_RIP_500_1"]);
-      next();
-    }
-  },
+  // CableMax has no 500
+  // {
+  //   path: "/internet-phone-500",
+  //   name: "two-play-internet-phone-500",
+  //   component: ZuhausePlusTwoPlay,
+  //   meta: {
+  //     title: "Red Internet und Telefon 500 Cable"
+  //   },
+  //   props: {
+  //     default: true,
+  //     activeProduct: ["2P_RIP_500_1"]
+  //   },
+  //   beforeEnter(to, from, next) {
+  //     store.dispatch("setActiveProduct", ["2P_RIP_500_1"]);
+  //     next();
+  //   }
+  // },
   {
     path: "/internet-phone-250",
     name: "two-play-internet-phone-250",

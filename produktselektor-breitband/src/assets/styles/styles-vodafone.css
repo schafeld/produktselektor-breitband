@@ -1,5 +1,5 @@
-/* Custom theme colors moved to tailwind.config.js */
-/* :root {
+/* Custom theme colors also used in tailwind.config.js */
+:root {
   --color-vodafone-grey: #4A4D4E;
   --color-vodafone-red: #e60000;
   --color-vodafone-white: #ffffff;
@@ -30,7 +30,7 @@
   --color-info-orange: #ff5400;
   --color-alert-warning: #fff5f0;
   --color-info: #ffffff;
-} */
+}
 
 /* TODO: Use fonts from Vodafone website */
 @font-face {

@@ -1,14 +1,22 @@
 <template>
+  <!-- TODO: Put content/components for existing and new customers into components -->
   <div id="panel-layout-two-play" class="flex flex-col md:flex-row h-full">
-    <div class="mobile product-selector visible w-full md:in-visible md:w-0">
+    <div
+      v-if="!isExistingCustomer"
+      class="mobile product-selector visible w-full md:invisible md:w-0"
+    >
       <tabs-mobile />
     </div>
-    <div class="main-content w-full md:w-2/3 bg-gray-200">
+    <div
+      v-if="!isExistingCustomer"
+      class="main-content w-full md:w-2/3 bg-gray-200"
+    >
       <h2 class="product-title text-vodafone-red font-bold">
         ZuhausePlusTwoPlay
       </h2>
       <p class="font-medium">
-        Aktives Produkt: {{ $store.getters.getActiveProduct[0] }}
+        Aktives Produkt: {{ currentProduct }} Bestandskunde:
+        {{ isExistingCustomer }}
       </p>
       <div class="pb-2/12">
         bla
@@ -66,10 +74,18 @@
       <tariff-comparison />
       <tariff-details />
     </div>
+    <!-- Make this div 'fixed' for a sticky sidebar menu. -->
     <div
-      class="desktop product-selector invisible w-0 md:visible md:w-1/3 fixed right-0 top-10"
+      v-if="!isExistingCustomer"
+      class="desktop product-selector invisible w-0 md:visible md:w-1/3 right-0 top-10"
     >
       <sidebar-desktop />
+    </div>
+    <div
+      v-if="isExistingCustomer"
+      class="main-content existing-customer w-full bg-gray-200"
+    >
+      <p>TODO: Inhalt für Bestandskunden</p>
     </div>
   </div>
 </template>
@@ -89,6 +105,14 @@ export default {
     TariffDetails,
     SidebarDesktop,
     TabsMobile
+  },
+  computed: {
+    isExistingCustomer() {
+      return this.$store.getters.isExistingCustomer;
+    },
+    currentProduct() {
+      return this.$store.getters.getActiveProduct[0];
+    }
   }
 };
 </script>

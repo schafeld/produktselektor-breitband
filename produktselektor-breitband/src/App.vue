@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="antialiased text-gray-900">
-    <div id="nav" class="sticky top-0 bg-white">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/internet-phone-250">2Play Topseller</router-link> |
-      <router-link to="/internet-phone-tv-250">3Play Topseller</router-link>
+    <div id="banner-top" class="md:sticky top-0 bg-white">
+      <banner-vodafone />
+    </div>
+    <div class="w-full">
+      <tabs-customer-type />
     </div>
     <router-view />
   </div>
@@ -12,32 +12,23 @@
 
 <script>
 import "@/assets/styles/styles-vodafone.css";
+import BannerVodafone from "@/components/organisms/BannerVodafone";
+import TabsCustomerType from "@/components/organisms/TabsCustomerType";
 
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    BannerVodafone,
+    TabsCustomerType
+  }
 };
 </script>
 
-<style lang="scss">
-// #app {
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-//   background: #dddddd;
-// }
-
-// #nav {
-//   padding: 30px;
-
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
+<style>
+#app {
+  overflow-x: hidden;
+}
+#banner-top {
+  z-index: 10;
+}
 </style>
