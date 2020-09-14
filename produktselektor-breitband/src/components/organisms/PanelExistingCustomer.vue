@@ -6,6 +6,7 @@
       <div class="panel">
         <div class="icon">
           <img
+            class="icon my-vodafone"
             src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/my-vodafone-mid.svg"
           />
         </div>
@@ -18,6 +19,7 @@
           <a href="/">
             Zum Login
             <img
+              class="icon arrow"
               src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/arrow-right.svg"
             />
           </a>
@@ -26,10 +28,11 @@
       <div class="panel">
         <div class="icon">
           <img
+            class="icon engineer"
             src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/engineer-mid.svg"
           />
         </div>
-        <div class="headline">Hilfe & Service</div>
+        <div class="headline">Hilfe &amp; Service</div>
         <div class="subline">
           Hol Dir Unterstützung zu Deinen
           Produkten
@@ -38,6 +41,7 @@
           <a href="/">
             Zur Serviceübersicht
             <img
+              class="icon arrow"
               src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/arrow-right.svg"
             />
           </a>
@@ -91,9 +95,9 @@
   text-align: center;
   margin: 0 16px;
 }
-.bk-routing-panels .panel-collection .panel .icon {
+/* .bk-routing-panels .panel-collection .panel .icon {
   padding-bottom: 18px;
-}
+} */
 .bk-routing-panels .panel-collection .panel .headline {
   font-family: VodafoneLt;
   font-style: normal;
@@ -118,9 +122,13 @@
   text-align: right;
   color: #2b2b2b;
 }
-.bk-routing-panels .panel-collection .panel .cta a img {
+/* .bk-routing-panels .panel-collection .panel .cta a img {
   position: relative;
   top: 14px;
+} */
+img.icon.my-vodafone,
+img.icon.engineer {
+    margin: 0 auto 10px;
 }
 </style>
         <div class="vodafone-teaser-module-collection">
