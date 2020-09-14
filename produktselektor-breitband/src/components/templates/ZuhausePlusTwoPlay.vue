@@ -7,10 +7,7 @@
     >
       <tabs-mobile />
     </div>
-    <div
-      v-if="!isExistingCustomer"
-      class="main-content w-full md:w-2/3"
-    >
+    <div v-if="!isExistingCustomer" class="main-content w-full md:w-2/3">
       <h2 class="product-title text-vodafone-red font-bold">
         ZuhausePlusTwoPlay
       </h2>
@@ -18,9 +15,7 @@
         Aktives Produkt: {{ currentProduct }} Bestandskunde:
         {{ isExistingCustomer }}
       </p>
-      <div class="pb-2/12">
-        bla
-      </div>
+      <div class="pb-2/12">bla</div>
       <!-- TODO: Turn into organism -->
       <section>
         <h2>Deine Vorteile</h2>
@@ -61,9 +56,7 @@
             <h3 class="hl-beta">
               Bis zu 180 € Prämie für Dich und Deinen Freund
             </h3>
-            <p>
-              Produkt auswählen. Empfehlung versenden. Über Prämie freuen.
-            </p>
+            <p>Produkt auswählen. Empfehlung versenden. Über Prämie freuen.</p>
           </div>
           <div class="article-image bg-red-100 lg:w-1/2 w-full">
             placeholder solid color, TODO: Insert proper image.
@@ -85,8 +78,8 @@
       v-if="isExistingCustomer"
       class="main-content existing-customer w-full"
     >
-      <!-- <p>TODO: Inhalt für Bestandskunden</p> -->
-      <panel-existing-customer />
+      <panels-existing-customer />
+      <tiles-existing-customer />
     </div>
   </div>
 </template>
@@ -97,7 +90,8 @@ import TariffComparison from "@/components/organisms/TariffComparison";
 import TariffDetails from "@/components/organisms/TariffDetails";
 import SidebarDesktop from "@/components/organisms/productselection/SidebarDesktop";
 import TabsMobile from "@/components/organisms/productselection/TabsMobile";
-import PanelExistingCustomer from "@/components/organisms/PanelExistingCustomer";
+import PanelsExistingCustomer from "@/components/organisms/PanelsExistingCustomer";
+import TilesExistingCustomer from "@/components/organisms/TilesExistingCustomer";
 
 export default {
   name: "LayoutIntegrator",
@@ -107,7 +101,8 @@ export default {
     TariffDetails,
     SidebarDesktop,
     TabsMobile,
-    PanelExistingCustomer
+    PanelsExistingCustomer,
+    TilesExistingCustomer
   },
   computed: {
     isExistingCustomer() {
