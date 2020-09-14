@@ -2,7 +2,7 @@
   <div class="bk-routing-panels">
     <div class="headline">Unser Portal für Unitymedia-Bestandskunden</div>
     <div class="subline">Wir bleiben an Deiner Seite</div>
-    <div class="panel-collection">
+    <div class="panel-collection flex flex-col md:flex-row">
       <div class="panel">
         <div class="icon">
           <img
@@ -74,9 +74,9 @@
   padding-bottom: 27px;
 }
 .bk-routing-panels .panel-collection {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: row; */
   max-width: 610px;
   margin: 0 auto;
   width: 100%;
@@ -89,11 +89,11 @@
   background: #f4f4f4;
   color: #3a3a3a;
   padding: 22px 20px 30px 20px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   text-align: center;
-  margin: 0 16px;
+  margin: 10px auto;
 }
 /* .bk-routing-panels .panel-collection .panel .icon {
   padding-bottom: 18px;
@@ -129,6 +129,9 @@
 img.icon.my-vodafone,
 img.icon.engineer {
     margin: 0 auto 10px;
+}
+img.icon.arrow {
+    display: inline-block;
 }
 </style>
         <div class="vodafone-teaser-module-collection">
