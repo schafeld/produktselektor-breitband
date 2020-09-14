@@ -269,7 +269,6 @@ h2.text--colorSecondary {
   position: relative;
   background: #428600;
   font-size: 14px;
-  min-width: 148px;
   padding: 3px 10px;
   color: #fff;
   font-weight: bold;
