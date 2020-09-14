@@ -9,7 +9,7 @@
     </div>
     <div
       v-if="!isExistingCustomer"
-      class="main-content w-full md:w-2/3 bg-gray-200"
+      class="main-content w-full md:w-2/3"
     >
       <h2 class="product-title text-vodafone-red font-bold">
         ZuhausePlusTwoPlay
@@ -83,9 +83,10 @@
     </div>
     <div
       v-if="isExistingCustomer"
-      class="main-content existing-customer w-full bg-gray-200"
+      class="main-content existing-customer w-full"
     >
-      <p>TODO: Inhalt für Bestandskunden</p>
+      <!-- <p>TODO: Inhalt für Bestandskunden</p> -->
+      <panel-existing-customer />
     </div>
   </div>
 </template>
@@ -96,6 +97,7 @@ import TariffComparison from "@/components/organisms/TariffComparison";
 import TariffDetails from "@/components/organisms/TariffDetails";
 import SidebarDesktop from "@/components/organisms/productselection/SidebarDesktop";
 import TabsMobile from "@/components/organisms/productselection/TabsMobile";
+import PanelExistingCustomer from "@/components/organisms/PanelExistingCustomer";
 
 export default {
   name: "LayoutIntegrator",
@@ -104,7 +106,8 @@ export default {
     TariffComparison,
     TariffDetails,
     SidebarDesktop,
-    TabsMobile
+    TabsMobile,
+    PanelExistingCustomer
   },
   computed: {
     isExistingCustomer() {
