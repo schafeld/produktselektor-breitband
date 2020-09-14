@@ -3,9 +3,9 @@
   <!-- In Vodafone/ZuhausePlus: class="flexbox-cell flexbox-cell--w20" -->
   <div class="sidebar-desktop">
     <div class="productCart productCart--bright">
-      <div class="flag flag--benefit" v-if="isTopseller">
+      <!-- <div class="flag flag--benefit" v-if="isTopseller">
         <b>Unser Tipp</b>
-      </div>
+      </div> -->
 
       <div class="mb--m">
         <!-- <div class="mb--s"><b>Max. Download-Geschwindigkeit</b><br>
@@ -71,6 +71,9 @@
                 @click="trackTabInteraction(['2P_RIP_1000_1'], environment)"
               >
                 <span class="download-speed">1000</span> Mbit/s
+              </span>
+              <span class="flag--inline">
+                <b>Unser Tipp</b>
               </span>
             </router-link>
           </div>
@@ -228,7 +231,7 @@ h2.text--colorSecondary {
   width: 15%;
 }
 
-.productCart--bright {
+/* .productCart--bright {
   background: #fff;
   border: solid #ccc 1px;
   color: #000;
@@ -238,6 +241,9 @@ h2.text--colorSecondary {
   padding: 20px;
   position: relative;
   text-decoration: none;
+} */
+.productCart {
+  position: relative;
 }
 .productCart a {
   color: black;
@@ -252,6 +258,19 @@ h2.text--colorSecondary {
   right: -6px;
 }
 .flag {
+  color: #fff;
+  font-weight: bold;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+}
+.flag--inline {
+  position: relative;
+  background: #428600;
+  font-size: 14px;
+  min-width: 148px;
+  padding: 3px 10px;
   color: #fff;
   font-weight: bold;
   line-height: 24px;
