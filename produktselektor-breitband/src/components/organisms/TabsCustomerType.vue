@@ -1,6 +1,8 @@
 <template>
   <div class="tabs-customer-type">
-    <h2>Was können wir für Dich tun?</h2>
+    <h2 class="main-address invisible md:visible md:m-12">
+      Was können wir für Dich tun?
+    </h2>
     <!-- TODO: Tabs as atoms -->
     <div class="tabs flex items-center">
       <div
@@ -8,7 +10,7 @@
         :class="{ active: !isExistingCustomer }"
         @click="setExistingCustomer(false)"
       >
-        <h3>Du bist Neukunde?</h3>
+        <h3 class="customer-type">Du bist Neukunde?</h3>
         <p>Produktwelt erkunden</p>
       </div>
       <div
@@ -16,7 +18,7 @@
         :class="{ active: isExistingCustomer }"
         @click="setExistingCustomer(true)"
       >
-        <h3>Du bist Bestandskunde?</h3>
+        <h3 class="customer-type">Du bist Bestandskunde?</h3>
         <p>Login, Support und Hilfe</p>
       </div>
     </div>
@@ -60,5 +62,18 @@ export default {
 }
 .tab.active {
   border-bottom: 3px solid var(--color-vodafone-red);
+}
+h2.main-address {
+  font-family: "VodafoneLt", "Vodafone", arial, helvetica, sans-serif;
+  font-size: 30px;
+  line-height: 25px;
+}
+h3.customer-type {
+  font-family: "VodafoneBd";
+  font-size: 18px;
+  line-height: 24px;
+}
+.tab p {
+  margin-bottom: 16px;
 }
 </style>
