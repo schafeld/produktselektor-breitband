@@ -4,7 +4,7 @@
       <banner-vodafone />
     </div>
     <div class="w-full">
-      <tabs-customer-type v-if="$data.EXPERIENCE_VERSION ==='experience4'"/>
+      <tabs-customer-type v-if="$data.EXPERIENCE_VERSION === 'experience4'" />
     </div>
     <router-view />
     <switcher-promotion v-if="!isExistingCustomer" />
