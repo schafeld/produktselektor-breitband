@@ -10,6 +10,7 @@
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
+    "animated-number-vue": "^1.0.0",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "tailwindcss": "^1.6.0",
