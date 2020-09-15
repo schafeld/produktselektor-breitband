@@ -10,7 +10,8 @@ Vue.config.productionTip = false;
 Vue.mixin({
   data() {
     return {
-      environment: process.env.NODE_ENV
+      environment: process.env.NODE_ENV,
+      EXPERIENCE_VERSION: window.FLAG_EXPERIENCE_VERSION
     };
   }
 });

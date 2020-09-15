@@ -15,6 +15,9 @@
         Aktives Produkt: {{ currentProduct }} Bestandskunde:
         {{ isExistingCustomer }}
       </p>
+      <p class="font-medium">
+        Experience flag = {{ $data.EXPERIENCE_VERSION }}
+      </p>
       <div class="pb-2/12">bla</div>
       <!-- TODO: Turn into organism -->
       <section>
