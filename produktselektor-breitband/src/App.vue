@@ -8,6 +8,7 @@
     </div>
     <router-view />
     <switcher-promotion v-if="!isExistingCustomer" />
+    <overlay-container />
   </div>
 </template>
 
@@ -16,13 +17,15 @@ import "@/assets/styles/styles-vodafone.css";
 import BannerVodafone from "@/components/organisms/BannerVodafone";
 import TabsCustomerType from "@/components/organisms/TabsCustomerType";
 import SwitcherPromotion from "@/components/organisms/SwitcherPromotion";
+import OverlayContainer from "@/components/atoms/OverlayContainer.vue";
 
 export default {
   name: "App",
   components: {
     BannerVodafone,
     TabsCustomerType,
-    SwitcherPromotion
+    SwitcherPromotion,
+    OverlayContainer
   },
   computed: {
     isExistingCustomer() {
