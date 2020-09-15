@@ -7,6 +7,7 @@
       <tabs-customer-type />
     </div>
     <router-view />
+    <switcher-promotion v-if="!isExistingCustomer" />
   </div>
 </template>
 
@@ -14,12 +15,19 @@
 import "@/assets/styles/styles-vodafone.css";
 import BannerVodafone from "@/components/organisms/BannerVodafone";
 import TabsCustomerType from "@/components/organisms/TabsCustomerType";
+import SwitcherPromotion from "@/components/organisms/SwitcherPromotion";
 
 export default {
   name: "App",
   components: {
     BannerVodafone,
-    TabsCustomerType
+    TabsCustomerType,
+    SwitcherPromotion
+  },
+  computed: {
+    isExistingCustomer() {
+      return this.$store.getters.isExistingCustomer;
+    }
   }
 };
 </script>
