@@ -3,98 +3,21 @@
   <!-- In Vodafone/ZuhausePlus: class="flexbox-cell flexbox-cell--w20" -->
   <div class="sidebar-desktop">
     <div class="productCart productCart--bright">
-      <!-- <div class="flag flag--benefit" v-if="isTopseller">
-        <b>Unser Tipp</b>
-      </div> -->
-
       <div class="mb--m">
-        <!-- <div class="mb--s"><b>Max. Download-Geschwindigkeit</b><br>
-              <overlay :modalVisibility="modalVisibility" modalHeight="720px"
-                  v-on:closeOverlay="toggleShow()">
-                  <tariff-advisor-widget />
-              </overlay>
-              <p @click="toggleShow()" class="show-modal-link">
-                  Wieviel Mbit/s brauche ich?
-              </p>
-        </div>-->
-
-        <div class="mb--s">
-          <div class="productCart-radio">
-            <router-link to="/internet-phone-50">
-              <span
-                class="productCart-label productCart-label--bandwidth text--bold"
-                :class="currentProduct === '2P_RIP_50_1' ? 'isSelected' : null"
-                @click="trackTabInteraction(['2P_RIP_50_1'], environment)"
-              >
-                <span class="download-speed">50</span> Mbit/s
-              </span>
-            </router-link>
-          </div>
-        </div>
-
-        <div class="mb--s">
-          <div class="productCart-radio">
-            <router-link to="/internet-phone-100">
-              <span
-                class="productCart-label productCart-label--bandwidth text--bold"
-                :class="currentProduct === '2P_RIP_100_1' ? 'isSelected' : null"
-                @click="trackTabInteraction(['2P_RIP_100_1'], environment)"
-              >
-                <span class="download-speed">100</span> Mbit/s
-              </span>
-            </router-link>
-          </div>
-        </div>
-
-        <div class="mb--s">
-          <div class="productCart-radio">
-            <router-link to="/internet-phone-250">
-              <span
-                class="productCart-label productCart-label--bandwidth"
-                :class="currentProduct === '2P_RIP_250_1' ? 'isSelected' : null"
-                @click="trackTabInteraction(['2P_RIP_250_1'], environment)"
-              >
-                <span class="download-speed">250</span> Mbit/s
-              </span>
-            </router-link>
-          </div>
-        </div>
-
-        <div class="mb--s">
-          <div class="productCart-radio">
-            <router-link to="/internet-phone-1000">
-              <span
-                class="productCart-label productCart-label--bandwidth"
-                :class="
-                  currentProduct === '2P_RIP_1000_1' ? 'isSelected' : null
-                "
-                @click="trackTabInteraction(['2P_RIP_1000_1'], environment)"
-              >
-                <span class="download-speed">1000</span> Mbit/s
-              </span>
-              <span class="flag--inline">
-                <b>Unser Tipp</b>
-              </span>
-            </router-link>
-          </div>
-        </div>
-      </div>
-      <div class="DEBUG">
-        xxx {{ currentProduct }} which is
-        {{ $store.getters.getProduct($store.getters.getActiveProduct).title }}
+        <product-selector
+          :currentProduct="currentProduct"
+          :portfolio="$store.getters.getBBProducts"
+        />
+        <product-display />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ProductSelector from "@/components/organisms/productselection/ProductSelector.vue";
+import ProductDisplay from "@/components/organisms/ProductDisplay.vue";
 export default {
-  data: function() {
-    return {
-      // The default product sku is gotten from router path entry
-      // selectedTariff: this.selectedProduct
-    };
-  },
   methods: {
     trackTabInteraction() {
       console.log("TODO: Track properly");
@@ -109,13 +32,21 @@ export default {
       );
     },
     currentProduct() {
-      return this.$store.getters.getActiveProduct[0];
+      return this.$store.getters.getActiveProduct;
     }
+  },
+  components: {
+    ProductSelector,
+    ProductDisplay
   }
 };
 </script>
 
 <style>
+.sidebar-desktop {
+  max-width: 420px;
+  padding: 0 44px;
+}
 /* Styles taken from Vodafone template at https://zuhauseplus.vodafone.de/internet-telefon/kabel/?product=kip1000-50mbit-bsit&icmp=festnetz:it */
 /* TODO: Clean up. May contain superfluous classes for this component.  */
 .contentWrapper {
@@ -264,31 +195,6 @@ h2.text--colorSecondary {
   position: absolute;
   text-align: center;
   z-index: 1;
-}
-.flag--inline {
-  position: relative;
-  background: #428600;
-  font-size: 14px;
-  padding: 3px 10px;
-  color: #fff;
-  font-weight: bold;
-  line-height: 24px;
-  position: absolute;
-  text-align: center;
-  z-index: 1;
-}
-.flag--benefit:before {
-  top: 30px;
-}
-.flag:before {
-  border-color: #5e2750 transparent transparent;
-  border-style: solid;
-  border-width: 6px 6px 6px 0;
-  content: "";
-  height: 0;
-  position: absolute;
-  right: 0;
-  width: 0;
 }
 
 .productCart-label--bandwidth {
