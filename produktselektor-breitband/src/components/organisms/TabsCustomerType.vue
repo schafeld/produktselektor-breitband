@@ -49,6 +49,7 @@ export default {
 <style>
 .tabs-customer-type {
   text-align: center;
+  margin-bottom: 80px;
 }
 .tabs {
   margin: 0 auto;
