@@ -117,6 +117,9 @@ export default {
   position: relative;
   padding-bottom: 10px;
 }
+.bb-selector li .speed-text {
+  cursor: pointer;
+}
 .bb-selector li img {
   position: absolute;
   top: 2px;
