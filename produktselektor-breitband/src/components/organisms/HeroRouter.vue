@@ -106,10 +106,13 @@ export default {
   position: relative;
   margin-bottom: 20px;
   padding-left: 20px;
+  margin-left: 20px;
 }
 .product-features ul li .stickyTable-check {
-  left: 0;
-  top: 0;
+  position: absolute;
+  display: inline-block;
+  left: 5px;
+  top: 4px;
   border-bottom: 1px solid #428600;
   border-right: 1px solid #428600;
   width: 7px;
@@ -170,14 +173,5 @@ export default {
   text-align: center;
   font-size: 16px;
   line-height: 20px;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-  position: absolute;
 }
 </style>
