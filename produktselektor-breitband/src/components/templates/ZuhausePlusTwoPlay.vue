@@ -1,12 +1,13 @@
 <template>
   <!-- TODO: Put content/components for existing and new customers into components -->
   <div id="panel-layout-two-play" class="flex flex-col md:flex-row h-full">
-    <div
+    <!-- TODO: Remove tabs menu when certain that radio buttons will be used in mobile too. -->
+    <!-- <div
       v-if="!isExistingCustomer"
       class="mobile product-selector visible w-full md:invisible md:w-0"
     >
       <tabs-mobile />
-    </div>
+    </div> -->
     <div v-if="!isExistingCustomer" class="main-content w-full md:w-2/3">
       <h2 class="product-title text-vodafone-red font-bold">
         ZuhausePlusTwoPlay
@@ -20,6 +21,16 @@
       </p>
       <div class="pb-2/12">bla</div>
       <!-- TODO: Turn into organism -->
+
+      <div
+        v-if="!isExistingCustomer"
+        class="mobile product-selector block w-full md:hidden md:w-0"
+      >
+        <!-- TODO: Use a distinct mobile version for product selection? Else rename component. -->
+        <!-- TODO: Check if this UI works on mobile devices or needs more padding for example. -->
+        <sidebar-desktop />
+      </div>
+
       <section>
         <h2>Deine Vorteile</h2>
         <!-- TODO: Turn article into/ use molecule 1/3 -->
@@ -73,7 +84,7 @@
     <!-- Make this div 'fixed' for a sticky sidebar menu. -->
     <div
       v-if="!isExistingCustomer"
-      class="desktop product-selector invisible w-0 md:visible md:w-1/3 right-0 top-10"
+      class="desktop product-selector hidden w-0 md:block md:w-1/3 right-0 top-10"
     >
       <sidebar-desktop />
     </div>
@@ -92,7 +103,7 @@ import AdditionalOptions from "@/components/organisms/AdditionalOptions";
 import TariffComparison from "@/components/organisms/TariffComparison";
 import TariffDetails from "@/components/organisms/TariffDetails";
 import SidebarDesktop from "@/components/organisms/productselection/SidebarDesktop";
-import TabsMobile from "@/components/organisms/productselection/TabsMobile";
+// import TabsMobile from "@/components/organisms/productselection/TabsMobile";
 import PanelsExistingCustomer from "@/components/organisms/PanelsExistingCustomer";
 import TilesExistingCustomer from "@/components/organisms/TilesExistingCustomer";
 
@@ -103,7 +114,7 @@ export default {
     TariffComparison,
     TariffDetails,
     SidebarDesktop,
-    TabsMobile,
+    // TabsMobile,
     PanelsExistingCustomer,
     TilesExistingCustomer
   },
