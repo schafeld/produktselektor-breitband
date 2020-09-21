@@ -3,6 +3,16 @@
     <p class="hero-module-headline">Deine Internet &amp; Telefon Flatrate</p>
     <div class="flex-grid">
       <div class="product-features">
+        <img
+          @click="openOverlay('router')"
+          class="open-layer icon-plus infolayer router"
+          src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/plus-button.svg"
+        />
+        <img
+          @click="openOverlay('cable')"
+          class="open-layer icon-plus infolayer cable"
+          src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/plus-button.svg"
+        />
         <ul>
           <li>
             <span class="stickyTable-check"></span>Highspeed WLAN-Kabelrouter
@@ -20,11 +30,14 @@
         <div class="product-badges">
           <img
             src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/red-dot-design-award.svg"
-            alt="red-dot-design-award"
+            alt="Red Dot Design Award"
           />
-          <!-- <img src="@/assets/router_incl_badge.svg" alt="free-wifi-router" /> -->
+          <img
+            src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/internet-cable.png"
+            alt="Internet Kabel"
+          />
         </div>
-        <p class="open-layer" @click="openOverlay">
+        <p class="open-layer" @click="openOverlay('router')">
           Details zur Vodafone Station (TODO: Use on plus icon instead of text)
           <span class="info-icon"></span>
         </p>
@@ -42,29 +55,36 @@
 <script>
 export default {
   methods: {
-    openOverlay() {
-      this.$store.commit("setOverlayContent", {
-        headline: " ",
-        copy: `
-      <p class="h1">Die Vodafone Station</p>
-      <p class="h2">Unser WLAN-Kabelrouter für ein noch besseres Internet-Erlebnis</p>
-      <div class="flex row">
-      <ul>
-        <li><span class="stickyTable-check"></span>Highspeed WLAN-Kabelrouter</li>
-        <li><span class="stickyTable-check"></span>Für sehr schnelles Internet plus Telefonie</li>
-        <li><span class="stickyTable-check"></span>Bereit für Gigabit-Geschwindigkeiten</li>
-        <li><span class="stickyTable-check"></span>Neuester WLAN-Standard für mehr Geschwindigkeit</li>
-        <li><span class="stickyTable-check"></span>Zuverlässige Internetverbindung durch DOCSIS 3.1 Technologie</li>
-        <li><span class="stickyTable-check"></span>Besseres Gaming und Streaming durch Latenzzeiten-Optimierung</li>
-        <li><span class="stickyTable-check"></span>4 Geräte über LAN-Kabel anschließbar</li>
-        <li><span class="stickyTable-check"></span>1 Telefonleitung, Anschluss von 2 analogen Telefonen möglich</li>
-        <li><span class="stickyTable-check"></span>Einfache Installation und Bedienung</li>
-        <li><span class="stickyTable-check"></span>Preisgekröntes Design</li>
-      </ul>
-      <img src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/vodafone-station.png" />
-      </div>
-      `
-      });
+    openOverlay(overlay) {
+      if (overlay === "router") {
+        this.$store.commit("setOverlayContent", {
+          headline: " ",
+          copy: `
+        <p class="h1">Die Vodafone Station</p>
+        <p class="h2">Unser WLAN-Kabelrouter für ein noch besseres Internet-Erlebnis</p>
+        <div class="flex row">
+        <ul>
+          <li><span class="stickyTable-check"></span>Highspeed WLAN-Kabelrouter</li>
+          <li><span class="stickyTable-check"></span>Für sehr schnelles Internet plus Telefonie</li>
+          <li><span class="stickyTable-check"></span>Bereit für Gigabit-Geschwindigkeiten</li>
+          <li><span class="stickyTable-check"></span>Neuester WLAN-Standard für mehr Geschwindigkeit</li>
+          <li><span class="stickyTable-check"></span>Zuverlässige Internetverbindung durch DOCSIS 3.1 Technologie</li>
+          <li><span class="stickyTable-check"></span>Besseres Gaming und Streaming durch Latenzzeiten-Optimierung</li>
+          <li><span class="stickyTable-check"></span>4 Geräte über LAN-Kabel anschließbar</li>
+          <li><span class="stickyTable-check"></span>1 Telefonleitung, Anschluss von 2 analogen Telefonen möglich</li>
+          <li><span class="stickyTable-check"></span>Einfache Installation und Bedienung</li>
+          <li><span class="stickyTable-check"></span>Preisgekröntes Design</li>
+        </ul>
+        <img src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/vodafone-station.png" />
+        </div>
+        `
+        });
+      } else if (overlay === "cable") {
+        this.$store.commit("setOverlayContent", {
+          headline: " TODO: ",
+          copy: `Define content!`
+        });
+      }
     }
   },
   computed: {
@@ -173,5 +193,19 @@ export default {
   text-align: center;
   font-size: 16px;
   line-height: 20px;
+}
+/* TODO: Improve positioning of icons */
+img.icon-plus.infolayer.router {
+  position: absolute;
+  right: 55%;
+}
+img.icon-plus.infolayer.cable {
+  position: absolute;
+  left: 40px;
+}
+img.icon-plus.infolayer.cable {
+  top: 320px;
+  position: relative;
+  left: 200px;
 }
 </style>
