@@ -9,25 +9,20 @@
       <tabs-mobile />
     </div> -->
     <div v-if="!isExistingCustomer" class="main-content w-full md:w-2/3">
-      <h2 class="product-title text-vodafone-red font-bold">
-        ZuhausePlusTwoPlay
-      </h2>
-      <p class="font-medium">
+      <hero-router />
+      <!-- <p class="font-medium">
         Aktives Produkt: {{ currentProduct }} Bestandskunde:
         {{ isExistingCustomer }}
       </p>
       <p class="font-medium">
         Experience flag = {{ $data.EXPERIENCE_VERSION }}
-      </p>
-      <div class="pb-2/12">bla</div>
-      <!-- TODO: Turn into organism -->
-
+      </p> -->
       <div
         v-if="!isExistingCustomer"
         class="mobile product-selector block w-full md:hidden md:w-0"
       >
         <!-- TODO: Use a distinct mobile version for product selection? Else rename component. -->
-        <!-- TODO: Check if this UI works on mobile devices or needs more padding for example. -->
+        <!-- TODO: Check if this UI actually works on mobile devices or needs more padding for example. -->
         <sidebar-desktop />
       </div>
 
@@ -106,6 +101,7 @@ import SidebarDesktop from "@/components/organisms/productselection/SidebarDeskt
 // import TabsMobile from "@/components/organisms/productselection/TabsMobile";
 import PanelsExistingCustomer from "@/components/organisms/PanelsExistingCustomer";
 import TilesExistingCustomer from "@/components/organisms/TilesExistingCustomer";
+import HeroRouter from "@/components/organisms/HeroRouter";
 
 export default {
   name: "LayoutIntegrator",
@@ -116,7 +112,8 @@ export default {
     SidebarDesktop,
     // TabsMobile,
     PanelsExistingCustomer,
-    TilesExistingCustomer
+    TilesExistingCustomer,
+    HeroRouter
   },
   computed: {
     isExistingCustomer() {
