@@ -4,16 +4,9 @@
     <h3 class="hero-module-subline">Red Internet &amp; Phone Cable</h3>
     <div class="flex-grid">
       <div class="product-features">
-        <img
-          @click="openOverlay('router')"
-          class="open-layer icon-plus infolayer router"
-          src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/plus-button.svg"
-        />
-        <img
-          @click="openOverlay('cable')"
-          class="open-layer icon-plus infolayer cable"
-          src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/plus-button.svg"
-        />
+        <h3 class="feature-list">
+          Die Internet &amp; Telefon-Flatrate für Dein Zuhause
+        </h3>
         <ul>
           <li>
             <span class="stickyTable-check"></span>Highspeed WLAN-Kabelrouter
@@ -29,17 +22,31 @@
           </li>
         </ul>
         <div class="product-badges">
-          <img
-            src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/red-dot-design-award.svg"
-            alt="Red Dot Design Award"
-          />
-          <img
-            src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/internet-cable.png"
-            alt="Internet Kabel"
-          />
+          <div class="design-award">
+            <img
+              src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/red-dot-design-award.svg"
+              alt="Red Dot Design Award"
+            />
+          </div>
+          <div class="product-feature">
+            <img
+              @click="openOverlay('cable')"
+              class="open-layer icon-plus infolayer cable"
+              src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/plus-button.svg"
+            />
+            <img
+              src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/internet-cable.png"
+              alt="Internet Kabel"
+            />
+          </div>
         </div>
       </div>
       <div class="router-image">
+        <img
+          @click="openOverlay('router')"
+          class="open-layer icon-plus infolayer router"
+          src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/plus-button.svg"
+        />
         <img
           src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/vodafone-station.png"
           alt="Router Produktabbildung"
@@ -57,9 +64,9 @@ export default {
         this.$store.commit("setOverlayContent", {
           headline: " ",
           copy: `
-        <p class="h1">Die Vodafone Station</p>
-        <p class="h2">Unser WLAN-Kabelrouter für ein noch besseres Internet-Erlebnis</p>
-        <div class="flex row">
+        <h3>Die Vodafone Station</h3>
+        <h4>Unser WLAN-Kabelrouter für ein noch besseres Internet-Erlebnis</h4>
+        <div class="flex row product-features overlay">
         <ul>
           <li><span class="stickyTable-check"></span>Highspeed WLAN-Kabelrouter</li>
           <li><span class="stickyTable-check"></span>Für sehr schnelles Internet plus Telefonie</li>
@@ -72,7 +79,7 @@ export default {
           <li><span class="stickyTable-check"></span>Einfache Installation und Bedienung</li>
           <li><span class="stickyTable-check"></span>Preisgekröntes Design</li>
         </ul>
-        <img src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/vodafone-station.png" />
+        <img class="hidden md:block" src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/vodafone-station.png" />
         </div>
         `
         });
@@ -97,16 +104,10 @@ export default {
 </script>
 
 <style>
-/* .product-hero-module {
-  margin: 55px auto 60px auto;
-} */
 .product-hero-module .flex-grid {
   display: grid;
   grid-template-columns: 50% 50%;
   min-height: 400px;
-}
-.product-hero-module .router-image {
-  margin: 0 auto;
 }
 .hero-module-headline {
   font-family: Vodafone;
@@ -116,7 +117,7 @@ export default {
   margin-bottom: 70px;
 }
 .product-features {
-  margin: 35px 0 55px 0;
+  margin: 25px 0 0 20px;
 }
 .product-features ul li {
   font-size: 16px;
@@ -138,14 +139,15 @@ export default {
 }
 .product-badges {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-
+.product-badges img {
+  margin: 0 auto 15px;
+  width: auto;
+}
 .open-layer {
-  font-size: 16px;
-  line-height: 30px;
-  text-decoration: underline;
   cursor: pointer;
 }
 .open-layer .info-icon {
@@ -193,19 +195,21 @@ export default {
 }
 /* TODO: Improve positioning of icons */
 img.icon-plus.infolayer.router {
-  position: absolute;
-  right: 55%;
+  position: relative;
+  top: 130px;
+  left: 85px;
 }
 img.icon-plus.infolayer.cable {
   position: absolute;
   left: 40px;
 }
 img.icon-plus.infolayer.cable {
-  top: 320px;
+  top: 210px;
   position: relative;
-  left: 200px;
+  left: -50px;
 }
-h2.hero-module-headline {
+h2.hero-module-headline,
+.overlay-box h3 {
   font-family: "VodafoneLt";
   font-style: normal;
   font-weight: normal;
@@ -213,11 +217,22 @@ h2.hero-module-headline {
   line-height: 41px;
   text-align: center;
   margin: 0 0 10px 0;
+  color: var(--vodafone-color-gray);
 }
-h3.hero-module-subline {
+h3.hero-module-subline,
+.overlay-box h4 {
   font-family: "VodafoneRg";
   font-size: 25px;
   line-height: 30px;
   text-align: center;
+  color: var(--vodafone-color-gray);
+}
+h3.feature-list {
+  margin: 0 0 20px 20px;
+}
+@media (max-width: 768px) {
+  .sidebar-desktop {
+    margin: 0 auto;
+  }
 }
 </style>
