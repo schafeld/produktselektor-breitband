@@ -38,10 +38,6 @@
             alt="Internet Kabel"
           />
         </div>
-        <p class="open-layer" @click="openOverlay('router')">
-          Details zur Vodafone Station (TODO: Use on plus icon instead of text)
-          <span class="info-icon"></span>
-        </p>
       </div>
       <div class="router-image">
         <img
