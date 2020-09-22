@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="antialiased text-gray-900">
-    <div id="banner-top" class="md:sticky top-0 bg-white">
+    <div id="banner-top" class="bg-white">
       <banner-vodafone />
     </div>
     <div class="w-full">
@@ -39,7 +39,7 @@ export default {
 #app {
   overflow-x: hidden;
 }
-#banner-top {
-  z-index: 10;
+.main-content {
+  margin-bottom: 10px;
 }
 </style>

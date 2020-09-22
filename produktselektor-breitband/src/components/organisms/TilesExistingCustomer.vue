@@ -1,10 +1,9 @@
 <template>
   <!-- TODO: Fix responsive layout -->
-  <div class="tiles-existing-customer vodafone-teaser-module-collection">
-    <div
-      class="teaser-module-box"
-      style="background:url(https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/bk-teaser-01.png)"
-    >
+  <div
+    class="tiles-existing-customer vodafone-teaser-module-collection flex flex-col md:flex-row"
+  >
+    <div class="teaser-module-box gigaspeed">
       <div class="textarea">
         <div class="headline">Gigaspeed</div>
         <div class="copy">
@@ -23,10 +22,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="teaser-module-box"
-      style="background:url(https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/bk-teaser-02.png)"
-    >
+    <div class="teaser-module-box gigakombi">
       <div class="textarea dark">
         <div class="headline">
           Gemeinsam günstiger
@@ -50,23 +46,27 @@
 
 <style>
 .vodafone-teaser-module-collection {
-  display: flex;
-  flex-direction: row;
   margin: 0 auto;
-  width: 100%;
   max-width: 1280px;
-  height: 100%;
 }
 .teaser-module-box {
   max-width: 638px;
   max-height: 570px;
   width: 100%;
-  height: 100%;
+  height: 500px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 0 5px;
+}
+.teaser-module-box.gigaspeed {
+  background:url(https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/bk-teaser-01.png);
+  background-size: cover;
+}
+.teaser-module-box.gigakombi {
+  background:url(https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/bk-teaser-02.png);
+  background-size: cover;
 }
 .teaser-module-box .textarea {
   background: rgba(255, 255, 255, 0.7);
