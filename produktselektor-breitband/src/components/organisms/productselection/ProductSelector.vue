@@ -76,7 +76,9 @@ export default {
     }
   },
   mounted() {
-    this.portfolio.reverse().forEach(product => {
+    // Simply reverse portfolio if order of selection radio buttons should be reverted again.
+    // this.portfolio.reverse().forEach(product => {
+    this.portfolio.forEach(product => {
       if (product.skus[0] === this.currentProduct[0]) {
         this.checked.push(true);
       } else {
