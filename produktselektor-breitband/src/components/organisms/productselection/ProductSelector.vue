@@ -79,7 +79,7 @@ export default {
     // Simply reverse portfolio if order of selection radio buttons should be reverted again.
     // this.portfolio.reverse().forEach(product => {
     // TODO(?): If this app should become accessible through deeplinks (i.e. route paths direct entry),
-    // or be used elsewhere then homepage only, then this radio button selection 
+    // or be used elsewhere then homepage only, then this radio button selection
     // will have to be refactored (selection doesn't match manual path entry).
     this.portfolio.forEach(product => {
       if (product.skus[0] === this.currentProduct[0]) {
