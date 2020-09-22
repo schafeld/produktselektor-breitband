@@ -61,11 +61,11 @@
   margin: 0 5px;
 }
 .teaser-module-box.gigaspeed {
-  background:url(https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/bk-teaser-01.png);
+  background: url(https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/bk-teaser-01.png);
   background-size: cover;
 }
 .teaser-module-box.gigakombi {
-  background:url(https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/bk-teaser-02.png);
+  background: url(https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/bk-teaser-02.png);
   background-size: cover;
 }
 .teaser-module-box .textarea {
