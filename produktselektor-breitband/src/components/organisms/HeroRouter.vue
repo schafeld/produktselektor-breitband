@@ -1,6 +1,7 @@
 <template>
   <div class="product-hero-module">
-    <p class="hero-module-headline">Deine Internet &amp; Telefon Flatrate</p>
+    <h2 class="hero-module-headline">Highspeed-Internet per Kabel</h2>
+    <h3 class="hero-module-subline">Red Internet &amp; Phone Cable</h3>
     <div class="flex-grid">
       <div class="product-features">
         <img
@@ -100,9 +101,9 @@ export default {
 </script>
 
 <style>
-.product-hero-module {
+/* .product-hero-module {
   margin: 55px auto 60px auto;
-}
+} */
 .product-hero-module .flex-grid {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -207,5 +208,20 @@ img.icon-plus.infolayer.cable {
   top: 320px;
   position: relative;
   left: 200px;
+}
+h2.hero-module-headline {
+  font-family: "VodafoneLt";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+h3.hero-module-subline {
+  font-family: "VodafoneRg";
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
 }
 </style>
