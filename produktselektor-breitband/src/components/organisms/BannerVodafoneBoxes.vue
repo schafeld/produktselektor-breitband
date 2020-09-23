@@ -124,4 +124,44 @@ export default {
   left: 68px;
   margin-top: 20px;
 }
+.cockpit-squares {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  color: var(--vodafone-color-gray);
+}
+.cockpit-squares .square {
+  background-color: #fff;
+  height: 198px;
+  min-height: 198px;
+  width: 208px;
+  min-width: 208px;
+  margin: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 1px 3px 0 rgba(51, 51, 51, 0.6);
+}
+.banner-vodafone .cockpit-squares .square {
+  color: var(--color-vodafone-grey);
+  font-size: 18px;
+  line-height: 24px;
+}
+.cockpit-squares .square-title {
+  font-family: VodafoneBd, Arial, sans-serif;
+  margin-top: 16px;
+}
+.cockpit-squares .square-sub-title {
+  font-family: VodafoneRg, Arial, sans-serif;
+}
+.cockpit-squares .square-title,
+.cockpit-squares .square-sub-title {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
 </style>
