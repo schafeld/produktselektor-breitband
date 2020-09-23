@@ -41,8 +41,8 @@ export default {
   components: {
     IconPerson,
     IconHouse,
-    IconTools,
-  },
+    IconTools
+  }
 };
 </script>
 
