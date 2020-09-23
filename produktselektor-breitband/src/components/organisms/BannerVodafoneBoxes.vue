@@ -5,11 +5,46 @@
       Entdecke Highspeed-Internet &amp; Phone Tarife, TV und Mobilfunk im
       ausgezeichneten Vodafone-Netz!
     </p>
-    <p>
-      TODO: Insert 3 boxes for experience 2.
-    </p>
+    <div class="cockpit-squares">
+      <!-- TODO: Check if tracking data attributes etc. are valid. -->
+      <a
+        class="square"
+        data-teaser-tracking-id="umo_web:nkoffer"
+        href="https://zuhauseplus.vodafone.de/internet-telefon/kabel/?uc=GEN&amp;sales_id=43904&amp;c_id=umo_ref:nkoffer&amp;j_id=ConConPer723F"
+      >
+        <icon-house />
+        <span class="square-title">Neukunden</span>
+        <span class="square-sub-title">Lass Dir Deine Angebote zeigen</span>
+      </a>
+      <a class="square" href="/kundencenter/">
+        <icon-person />
+        <span class="square-title">Unitymedia-Kunden</span>
+        <span class="square-sub-title">Log Dich als Kunde ein</span>
+      </a>
+      <a class="square" href="/privatkunden/hilfe_service/hilfe_themen/">
+        <icon-tools />
+        <span class="square-title">Hilfe &amp; Service</span>
+        <span class="square-sub-title">
+          Hol Dir Unterstützung zu Deinen Produkten
+        </span>
+      </a>
+    </div>
   </div>
 </template>
+
+<script>
+import IconPerson from "@/components/atoms/icons/IconPerson";
+import IconHouse from "@/components/atoms/icons/IconHouse";
+import IconTools from "@/components/atoms/icons/IconTools";
+
+export default {
+  components: {
+    IconPerson,
+    IconHouse,
+    IconTools,
+  },
+};
+</script>
 
 <style lang="scss">
 // styles taken from design prototype and VF website
@@ -76,5 +111,17 @@
       stroke-width: 2px;
     }
   }
+}
+// svg.icon.house,
+// svg.icon.person,
+// svg.icon.tools {
+//   width: 100px;
+// }
+.cockpit-squares svg {
+  width: 72px;
+  height: 72px;
+  position: relative;
+  left: 68px;
+  margin-top: 20px;
 }
 </style>
