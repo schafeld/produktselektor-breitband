@@ -85,8 +85,27 @@ export default {
         });
       } else if (overlay === "cable") {
         this.$store.commit("setOverlayContent", {
-          headline: " TODO: ",
-          copy: `Define content!`
+          headline: " ",
+          copy: `
+          <h3>Auf das Kabel kommt es an!</h3>
+          <p class="text-intro">Kabel und DSL sind unterschiedliche Technologien... TODO: Add text</p>
+          <div class="text-wrapper flex flex-col md:flex-row">
+            <div class="text-body features-dsl">
+            <p>DSL bla bla bla</p>
+            <p>DSL bla bla bla</p>
+            <p>DSL Bild</p>
+            <p>DSL bla bla bla</p>
+            <p>DSL bla bla bla</p>
+            </div>
+            <div class="text-body features-cable">
+            <p>Kabel bla bla bla</p>
+            <p>Kabel bla bla bla</p>
+            <p>Kabel Bild</p>
+            <p>Kabel bla bla bla</p>
+            <p>Kabel bla bla bla</p>
+            </div>
+          </div>
+          `
         });
       }
     }
@@ -233,6 +252,24 @@ h3.feature-list {
 @media (max-width: 768px) {
   .sidebar-desktop {
     margin: 0 auto;
+  }
+}
+/* Kabel/DSL Overlay */
+.text-intro {
+  margin: 2%;
+}
+.text-body {
+  width: 46%;
+  margin: 2%;
+}
+.text-body.features-cable p,
+.text-body.features-dsl p {
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .text-body {
+    width: 96%;
+    margin: 2%;
   }
 }
 </style>
