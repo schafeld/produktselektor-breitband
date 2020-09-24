@@ -73,6 +73,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 30px;
+  font-family: VodafoneRg;
 }
 .overlay-container .overlay-box .overlay-headline {
   font-family: VodafoneLT;

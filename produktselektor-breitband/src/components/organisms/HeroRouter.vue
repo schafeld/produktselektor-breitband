@@ -88,21 +88,86 @@ export default {
           headline: " ",
           copy: `
           <h3>Auf das Kabel kommt es an!</h3>
-          <p class="text-intro">Kabel und DSL sind unterschiedliche Technologien... TODO: Add text</p>
+          <p class="text-intro">Kabel und DSL sind unterschiedliche Technologien, die der Kunde theoretisch gleichzeitig einsetzen kann. Während DSL bei den
+            Uploadgeschwindigkeiten vorn liegt, hat Kabel den entscheidenden Vorteil in der Verbindung vom Verteilerkasten bis zum
+            Teilnehmerhaushalt (sog. „letzte Meile“), hinsichtlich Stabilität der Verbindung und faktischer Downloadgeschwindigkeit.
+          </p>
           <div class="text-wrapper flex flex-col md:flex-row">
             <div class="text-body features-dsl">
-            <p>DSL bla bla bla</p>
-            <p>DSL bla bla bla</p>
-            <p>DSL Bild</p>
-            <p>DSL bla bla bla</p>
-            <p>DSL bla bla bla</p>
+              <h3>
+                DSL-Netz
+              </h3>
+              <h4>
+                Verbindung bis zum Verteilerkasten
+              </h4>
+              <p>
+                Glasfaser
+              </p>
+              <h4>
+                Verbindung vom Verteiler bis zum Teilnehmerhaushalt (“letzte Meile”)
+              </h4>
+              <p>
+                Kupfer (Telefonkabel)
+              </p>
+              <p class="image-wrapper">
+                <img 
+                  src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/cable-dsl.svg"
+                  class="cable dsl"
+                />
+              </p>
+              <h4>
+                Eigenschaften des Kabels
+              </h4>
+              <ul>
+                <li><span class="stickyTable-check"></span>Einfache Umschirmung</li>
+                <li><span class="stickyTable-check"></span>Hohe Störanfälligkeit</li>
+                <li><span class="stickyTable-check"></span>Starker Bandbreitenverlust über Entfernung</li>
+              </ul>
+              <h4>
+                Internetbandbreiten
+              </h4>
+              <p>
+                Bandbreiten können durch sogenanntes ‘Vectoring’, eine rechnergestützte Verbesserung des Signals, 
+                erhöht werden. Doch selbst mit VDSL werden dabei höchstens 100 MBit/s im Download erreicht.
+              </p>
             </div>
             <div class="text-body features-cable">
-            <p>Kabel bla bla bla</p>
-            <p>Kabel bla bla bla</p>
-            <p>Kabel Bild</p>
-            <p>Kabel bla bla bla</p>
-            <p>Kabel bla bla bla</p>
+              <h3>
+                Kabelnetz
+              </h3>
+              <h4>
+                Verbindung bis zum Verteilerkasten
+              </h4>
+              <p>
+                Glasfaser
+              </p>
+              <h4>
+                Verbindung vom Verteiler bis zum Teilnehmerhaushalt (“letzte Meile”)
+              </h4>
+              <p>
+                Kupfer (Koaxialkabel)
+              </p>
+              <p class="image-wrapper">
+                <img 
+                  src="https://www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/weichenseite/cable-coaxial.svg"
+                  class="cable coaxial"
+                />
+              </p>
+              <h4>
+                Eigenschaften des Kabels
+              </h4>
+              <ul>
+                <li><span class="stickyTable-check"></span>Mehrfache Umschirmung</li>
+                <li><span class="stickyTable-check"></span>Geringe Störanfälligkeit</li>
+                <li><span class="stickyTable-check"></span>Geringer Bandbreitenverlust über Entfernung</li>
+              </ul>
+              <h4>
+                Internetbandbreiten
+              </h4>
+              <p>
+                Die Nutzung robust abgeschirmter, hochwertiger Koaxialkabel bietet große Leistungsreserven. 
+                Schon heute werden damit in vielen Ausbaugebieten bis zu 1.000 MBit/s (Gigabit) im Download erreicht.
+              </p>
             </div>
           </div>
           `
@@ -156,6 +221,12 @@ export default {
   height: 14px;
   transform: rotate(44deg);
 }
+.product-feature {
+  width: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+
 .product-badges {
   display: flex;
   flex-direction: column;
@@ -219,13 +290,9 @@ img.icon-plus.infolayer.router {
   left: 85px;
 }
 img.icon-plus.infolayer.cable {
+  top: 140px;
   position: absolute;
-  left: 40px;
-}
-img.icon-plus.infolayer.cable {
-  top: 210px;
-  position: relative;
-  left: -50px;
+  left: 20px;
 }
 h2.hero-module-headline,
 .overlay-box h3 {
@@ -271,5 +338,39 @@ h3.feature-list {
     width: 96%;
     margin: 2%;
   }
+}
+
+img.cable {
+  display: inline-block;
+}
+img.cable.coaxial {
+  margin-top: 25px;
+}
+p.image-wrapper {
+  min-height: 150px;
+}
+.text-wrapper h4 {
+  font-family: VodafoneBd;
+  font-size: 18px;
+  text-align: left;
+  margin: 5px 0;
+}
+.overlay-container .text-body li {
+  margin: 8px 0;
+  font-size: 16px;
+}
+.overlay-box ul li .stickyTable-check {
+  position: absolute;
+  display: inline-block;
+  left: 5px;
+  top: 4px;
+  border-bottom: 1px solid #428600;
+  border-right: 1px solid #428600;
+  width: 7px;
+  height: 14px;
+  transform: rotate(44deg);
+}
+.text-body h3 {
+  text-align: left;
 }
 </style>
