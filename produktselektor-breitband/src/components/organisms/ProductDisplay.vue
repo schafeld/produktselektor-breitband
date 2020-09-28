@@ -4,8 +4,8 @@
       {{ product.title }}
     </p>
     <p class="product-speeds">
-      Bis zu {{ product.download }} im Download und {{ product.upload }} im
-      Download
+      Bis zu {{ product.download }} MBit/s im Download und {{ product.upload }}
+      MBit/s im Upload
     </p>
     <p v-if="!product.monthOfPriceChange" class="only-class red">
       Dauerthaft nur
