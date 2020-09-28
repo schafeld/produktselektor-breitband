@@ -62,6 +62,8 @@ export default {
   top: 0;
 }
 .overlay-container .overlay-box {
+  overflow-y: auto;
+  max-height: 80%;
   background: #ffffff;
   height: auto;
   width: 100%;
