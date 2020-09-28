@@ -201,7 +201,7 @@ export default {
   margin-bottom: 70px;
 }
 .product-features {
-  margin: 25px 0 0 20px;
+  margin: 25px 0 0 60px;
 }
 .product-features ul li {
   font-size: 16px;
@@ -319,6 +319,9 @@ h3.feature-list {
 @media (max-width: 768px) {
   .sidebar-desktop {
     margin: 0 auto;
+  }
+  .product-features {
+    margin: 25px 0 0 20px;
   }
 }
 /* Kabel/DSL Overlay */
