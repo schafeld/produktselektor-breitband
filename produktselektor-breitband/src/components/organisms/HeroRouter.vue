@@ -188,6 +188,9 @@ export default {
 </script>
 
 <style>
+.product-hero-module {
+  border-right: 1px solid lightgrey;
+}
 .product-hero-module .flex-grid {
   display: grid;
   grid-template-columns: 50% 50%;
