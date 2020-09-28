@@ -29,7 +29,7 @@
             :round="true"
             :duration="300"
           />
-          €<sup @click="setOverlayLegaltext()">1</sup>
+          €<sup @click="setOverlayLegaltext()">*</sup>
         </span>
         <span class="contract-duration">pro Monat</span>
       </p>
@@ -54,7 +54,7 @@
             :round="true"
             :duration="300"
           />
-          €<sup @click="setOverlayLegaltext()">1</sup>
+          €<sup @click="setOverlayLegaltext()">*</sup>
         </span>
         <span class="contract-duration">pro Monat</span>
       </p>
@@ -74,7 +74,7 @@
             :value="product.online_advantage"
             :round="true"
             :duration="300"
-          />€ <sup @click="setOverlayOALegaltext()">2</sup>
+          />€ <sup @click="setOverlayOALegaltext()">*</sup>
         </p>
         <p class="copy">Rechnungsgutschrift bei Online-Bestellung</p>
       </div>
@@ -187,7 +187,7 @@ export default {
   line-height: 50px;
 }
 
-.product-display .price-details .right .cents sup {
+/* .product-display .price-details .right .cents sup {
   font-family: VodafoneRG;
   font-size: 12px;
   line-height: 22px;
@@ -196,7 +196,7 @@ export default {
   top: -30px;
   left: 5px;
   cursor: pointer;
-}
+} */
 
 .product-display .price-details .right .contract-duration {
   font-family: VodafoneRg;
@@ -249,7 +249,7 @@ export default {
   position: relative;
 }
 
-.online-advantage-teaser .value sup {
+/* .online-advantage-teaser .value sup {
   font-family: VodafoneRG;
   font-size: 12px;
   line-height: 22px;
@@ -259,6 +259,31 @@ export default {
   top: -22px;
   left: -2px;
   cursor: pointer;
+} */
+.online-advantage-teaser .value sup,
+.product-display .price-details .right .cents sup {
+  background-color: #f4f4f4;
+  border: solid 1px #ccc;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: VodafoneRG, "Vodafone", arial, helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  height: 11px;
+  line-height: 1;
+  margin-left: 5px;
+  text-align: center;
+  vertical-align: top;
+  width: 11px;
+  cursor: pointer;
+  text-decoration: none;
+  top: 0;
+  left: -10px;
+}
+.product-display .price-details .right .cents sup {
+  top: 10px;
+  left: 0;
 }
 
 .online-advantage-teaser .copy {
