@@ -12,98 +12,66 @@ export default new Vuex.Store({
     products: [
       {
         set: "2play",
-        title: "Red Internet & Phone 50",
-        skus: ["2P_RIP_50_1"],
+        title: "Vodafone CableMax",
+        skus: ["2P_RIP_1000_1"],
+        upfront_price: 0,
+        monthly_price: 39.99,
+        contract_duration: 24,
+        online_advantage: 0,
+        wifiRouter: 0,
+        download: "1000",
+        upload: "50",
+        deliveryfee: 0,
+        legaltext: `Das 79,98 € Einmalentgelt (bestehend aus 69,99 € Bereitstellungsentgelt bzw. Aktivierungsgebühr und 9,99 € Lieferpauschale) erlassen wir Dir. Mindestlaufzeit 24 Monate. Verlängerung um je 12 Monate, wenn nicht 12 Wochen bzw. 3 Monate in NRW, Hessen und BW vor Laufzeitende in Textform gekündigt wurde.<br>
+<br>
+        Inklusive Sicherheitspaket für 2 Geräte in den ersten 2 Monaten gratis, ab dem 3. Monat 3,99 €/Monat (nicht in NRW, Hessen und BW); jederzeit in Textform kündbar mit einer 4-Wochen-Frist.<br>
+        <br>
+        Festnetz-Flat ins deutsche Festnetz. Sonderrufnummern von Festnetz-Flat ausgenommen. Telefonate in alle deutschen Mobilfunknetze 19,9 Ct/Min, Telefonate ins Ausland, z. B. USA, ab 9,9 Ct /Min. Call-by-Call und Preselection nicht verfügbar.<br>
+        <br>
+        Mit Vodafone CableMax erhalten Sie das schnellste aktuell bei Ihnen verfügbare Vodafone Internet & Phone Produkt über Kabel mit einer maximalen Downloadgeschwindigkeit von 500 oder 1000 Mbit/s. Der erforderliche WLAN-Kabelrouter wird während der Vertragslaufzeit zur Verfügung gestellt und ist nach Vertragsende zurückzugeben.<br>
+        <br>
+        Gilt nur für Internet & Phone-Neukunden, in deren Haushalt in den letzten 3 Monaten weder ein Internet- noch ein Telefonanschluss von Vodafone vorhanden war. Beachten Sie bitte die Verfügbarkeit: Internet & Phone-Produkte sind in vielen unserer Kabel-Ausbaugebiete und mit modernisiertem Hausnetz verfügbar. Prüfen Sie bitte, ob Sie die Produkte im gewünschten Objekt nutzen können.<br>
+        <br>
+        Anbieter in NRW: Vodafone NRW GmbH, in Hessen: Vodafone Hessen GmbH & Co. KG, in Baden-Württemberg: Vodafone BW GmbH, alle Aachener Straße 746–750, 50933 Köln, in den übrigen Bundesländern: Vodafone Kabel Deutschland GmbH, Betastraße 6-8, 85774 Unterföhring<br>`,
+        url: "/internet-phone-1000",
+        pib:
+          "//www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/global/pdf/pib/PIB_Red-Internet-&-Phone-1000-Cable-U.pdf",
+        options: [
+          "Telefon_Komfort_1",
+          "Security-Package_1",
+          "Euro_Flat_1",
+          "Mob_Euro_Flat_1",
+          "International_Flat_1",
+          "International_Allnet_1"
+        ],
+        effectivePrice: 40.4,
+        billType: "Online-Rechnung",
+        contractCancellation: 3,
+        contractPrerequisites:
+          "Kein Kabelanschluss-Vertrag notwendig, es muss nur ein Kabel-Anschluss an Deinem Wohnort verfügbar sein."
+      },
+      {
+        set: "3play",
+        title: "Red Internet & Phone 50 Cable + Horizon TV",
+        skus: ["2P_RIP_50_1", "HRZ_TV_0420_1"],
         upfront_price: 69.99,
-        monthly_price: 19.99,
-        monthOfPriceChange: 25,
-        productrateplans: 29.99,
+        monthly_price: 24.98,
+        monthOfPriceChange: 13,
+        productrateplans: 39.98, // Besit
         contract_duration: 24,
         online_advantage: 30,
         download: "50",
         upload: "5",
         deliveryfee: 0,
         legaltext:
-          '<h3 class="h3 legal-dialog-header">Rechtliche Hinweise für Red Internet & Phone 50</h3><br>Ab dem 25. Monat gilt der Preis von 29,99 € pro Monat. Mindestlaufzeit 24 Monate. Verlängerung um je 12 Monate, wenn nicht 3 Monate vor Laufzeitende in Textform gekündigt wurde. Aktivierungsgebühr 69,99 €. Festnetz-Flat ins deutsche Festnetz. Sonderrufnummern sind von der Festnetz-Flat ausgenommen. Telefonate in alle deutschen Mobilfunknetze 19,9 Ct/Min, Telefonate ins Ausland, z. B. USA, ab 9,9 Ct/Min. Call-by-Call und Preselection nicht verfügbar. Du bekommst den erforderlichen WLAN-Kabelrouter für den Zeitraum Deines Vertrags zur Verfügung gestellt. Nach Vertragsende ist der Kabel-Router zurückzugeben. Gilt nur für Internet & Phone-Neukunden, in deren Haushalt in den letzten 3 Monaten weder ein Internet- noch ein Telefonanschluss von Vodafone vorhanden war. Internet & Phone-Produkte sind in vielen unserer Kabel-Ausbaugebiete und mit modernisiertem Hausnetz verfügbar. Prüf, ob das Produkt bei Dir verfügbar ist.',
-        url: "/internet-phone-50",
+          '<h3 class="h3 legal-dialog-header">Rechtliche Hinweise für Red Internet & Phone 50 + Horizon TV</h3><br>Der Preis setzt sich zusammen aus dem Red Internet & Phone 50 Cable (19,99 € pro Monat die ersten 24 Monate, danach 29,99 € pro Monat) und dem Preis für Horizon TV (4,99 € pro Monat die ersten 12 Monate, danach 9,99 € pro Monat). Bei Beendigung des Vertrags über das Internet & Phone Produkt gilt der reguläre monatliche Preis in Höhe von 14,99 € für Horizon TV.) Mindestlaufzeit 24 Monate. Verlängerung um je 12 Monate, wenn nicht 3 Monate vor Laufzeitende in Textform gekündigt wurde. Einmalige Aktivierungsgebühr 69,99 €. Voraussetzung für Horizon TV ist ein Kabelanschlussvertrag von Vodafone (z.B. im Einzelnutzervertrag 20,99€ pro Monat oder oft in den Mietnebenkosten enthalten). Festnetz-Flat ins deutsche Festnetz. Sonderrufnummern sind von der Festnetz-Flat ausgenommen. Telefonate in alle deutschen Mobilfunknetze 19,9 Ct/Min, Telefonate ins Ausland, z. B. USA, ab 9,9 Ct/Min. Call-by-Call und Preselection nicht verfügbar. Du bekommst den erforderlichen WLAN-Kabelrouter für den Zeitraum Deines Vertrags zur Verfügung gestellt. Nach Vertragsende ist der Kabel-Router zurückzugeben. Gilt nur für Internet & Phone-Neukunden, in deren Haushalt in den letzten 3 Monaten weder ein Internet- noch ein Telefonanschluss von Vodafone vorhanden war. Internet & Phone-Produkte sind in vielen unserer Kabel-Ausbaugebiete und mit modernisiertem Hausnetz verfügbar. Prüf bitte, ob das Produkt bei Dir verfügbar ist. ',
+        url: "/internet-phone-tv-50",
         pib:
           "//www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/global/pdf/pib/PIB_Red-Internet-&-Phone-50-Cable-U.pdf",
         options: [
           {
             title: "Internet-Optionen",
             skus: ["Telefon_Komfort_1", "Security-Package_1"]
-          },
-          {
-            title: "Telefon-Optionen",
-            skus: [
-              "Telefon_Komfort_1",
-              "Euro_Flat_1",
-              "Mob_Euro_Flat_1",
-              "International_Flat_1",
-              "International_Allnet_1"
-            ]
-          }
-        ]
-      },
-      {
-        set: "2play",
-        title: "Red Internet & Phone 100",
-        skus: ["2P_RIP_100_1"],
-        upfront_price: 69.99,
-        monthly_price: 19.99,
-        monthOfPriceChange: 7,
-        productrateplans: 34.99, // Besit
-        contract_duration: 24,
-        online_advantage: 120,
-        download: "100",
-        upload: "10",
-        deliveryfee: 0,
-        recommended: false,
-        legaltext:
-          '<h3 class="h3 legal-dialog-header">Rechtliche Hinweise für Red Internet & Phone 100</h3><br>Ab dem 7. Monat gilt der Preis von 34,99 € pro Monat. Mindestlaufzeit 24 Monate. Verlängerung um je 12 Monate, wenn nicht 3 Monate vor Laufzeitende in Textform gekündigt wurde. Aktivierungsgebühr 69,99 €. Festnetz-Flat ins deutsche Festnetz. Sonderrufnummern sind von der Festnetz-Flat ausgenommen. Telefonate in alle deutschen Mobilfunknetze 19,9 Ct/Min, Telefonate ins Ausland, z. B. USA, ab 9,9 Ct/Min. Call-by-Call und Preselection nicht verfügbar. Du bekommst den erforderlichen WLAN-Kabelrouter für den Zeitraum Deines Vertrags zur Verfügung gestellt. Nach Vertragsende ist der Kabel-Router zurückzugeben. Gilt nur für Internet & Phone-Neukunden, in deren Haushalt in den letzten 3 Monaten weder ein Internet- noch ein Telefonanschluss von Vodafone vorhanden war. Internet & Phone-Produkte sind in vielen unserer Kabel-Ausbaugebiete und mit modernisiertem Hausnetz verfügbar. Prüf bitte, ob das Produkt bei Dir verfügbar ist.',
-        url: "/internet-phone-100",
-        pib:
-          "//www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/global/pdf/pib/PIB_Red-Internet-&-Phone-100-Cable-U.pdf",
-        options: [
-          {
-            title: "Internet-Optionen",
-            skus: ["Telefon_Komfort_1", "Security-Package_1"]
-          },
-          {
-            title: "Telefon-Optionen",
-            skus: [
-              "Telefon_Komfort_1",
-              "Euro_Flat_1",
-              "Mob_Euro_Flat_1",
-              "International_Flat_1",
-              "International_Allnet_1"
-            ]
-          }
-        ]
-      },
-      {
-        set: "2play",
-        title: "Red Internet & Phone 250",
-        skus: ["2P_RIP_250_1"],
-        upfront_price: 69.99,
-        monthly_price: 19.99,
-        monthOfPriceChange: 7,
-        productrateplans: 39.99, // Besit
-        contract_duration: 24,
-        online_advantage: 170,
-        download: "250",
-        upload: "25",
-        deliveryfee: 0,
-        recommended: true,
-        legaltext:
-          '<h3 class="h3 legal-dialog-header">Rechtliche Hinweise für Red Internet & Phone 250</h3><br>Ab dem 7. Monat gilt der Preis von 39,99 € pro Monat. Mindestlaufzeit 24 Monate. Verlängerung um je 12 Monate, wenn nicht 3 Monate vor Laufzeitende in Textform gekündigt wurde. Aktivierungsgebühr 69,99 €. Festnetz-Flat ins deutsche Festnetz. Sonderrufnummern sind von der Festnetz-Flat ausgenommen. Telefonate in alle deutschen Mobilfunknetze 19,9 Ct/Min, Telefonate ins Ausland, z. B. USA, ab 9,9 Ct/Min. Call-by-Call und Preselection nicht verfügbar. Du bekommst den erforderlichen WLAN-Kabelrouter für den Zeitraum Deines Vertrags zur Verfügung gestellt. Nach Vertragsende ist der Kabel-Router zurückzugeben. Gilt nur für Internet & Phone-Neukunden, in deren Haushalt in den letzten 3 Monaten weder ein Internet- noch ein Telefonanschluss von Vodafone vorhanden war. Internet & Phone-Produkte sind in vielen unserer Kabel-Ausbaugebiete und mit modernisiertem Hausnetz verfügbar. Prüf bitte, ob das Produkt bei Dir verfügbar ist.',
-        url: "/internet-phone-250",
-        pib:
-          "//www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/global/pdf/pib/PIB_Red-Internet-&-Phone-250-Cable-U.pdf",
-        options: [
-          {
-            title: "Internet-Optionen",
-            skus: ["Telefon_Komfort_1", "Power_Upload_1", "Security-Package_1"]
           },
           {
             title: "Telefon-Optionen",
@@ -191,60 +159,92 @@ export default new Vuex.Store({
       */
       {
         set: "2play",
-        title: "Vodafone CableMax",
-        skus: ["2P_RIP_1000_1"],
-        upfront_price: 0,
-        monthly_price: 39.99,
+        title: "Red Internet & Phone 250",
+        skus: ["2P_RIP_250_1"],
+        upfront_price: 69.99,
+        monthly_price: 19.99,
+        monthOfPriceChange: 7,
+        productrateplans: 39.99, // Besit
         contract_duration: 24,
-        online_advantage: 0,
-        wifiRouter: 0,
-        download: "1000",
-        upload: "50",
+        online_advantage: 170,
+        download: "250",
+        upload: "25",
         deliveryfee: 0,
-        legaltext: `Das 79,98 € Einmalentgelt (bestehend aus 69,99 € Bereitstellungsentgelt bzw. Aktivierungsgebühr und 9,99 € Lieferpauschale) erlassen wir Dir. Mindestlaufzeit 24 Monate. Verlängerung um je 12 Monate, wenn nicht 12 Wochen bzw. 3 Monate in NRW, Hessen und BW vor Laufzeitende in Textform gekündigt wurde.<br>
-<br>
-        Inklusive Sicherheitspaket für 2 Geräte in den ersten 2 Monaten gratis, ab dem 3. Monat 3,99 €/Monat (nicht in NRW, Hessen und BW); jederzeit in Textform kündbar mit einer 4-Wochen-Frist.<br>
-        <br>
-        Festnetz-Flat ins deutsche Festnetz. Sonderrufnummern von Festnetz-Flat ausgenommen. Telefonate in alle deutschen Mobilfunknetze 19,9 Ct/Min, Telefonate ins Ausland, z. B. USA, ab 9,9 Ct /Min. Call-by-Call und Preselection nicht verfügbar.<br>
-        <br>
-        Mit Vodafone CableMax erhalten Sie das schnellste aktuell bei Ihnen verfügbare Vodafone Internet & Phone Produkt über Kabel mit einer maximalen Downloadgeschwindigkeit von 500 oder 1000 Mbit/s. Der erforderliche WLAN-Kabelrouter wird während der Vertragslaufzeit zur Verfügung gestellt und ist nach Vertragsende zurückzugeben.<br>
-        <br>
-        Gilt nur für Internet & Phone-Neukunden, in deren Haushalt in den letzten 3 Monaten weder ein Internet- noch ein Telefonanschluss von Vodafone vorhanden war. Beachten Sie bitte die Verfügbarkeit: Internet & Phone-Produkte sind in vielen unserer Kabel-Ausbaugebiete und mit modernisiertem Hausnetz verfügbar. Prüfen Sie bitte, ob Sie die Produkte im gewünschten Objekt nutzen können.<br>
-        <br>
-        Anbieter in NRW: Vodafone NRW GmbH, in Hessen: Vodafone Hessen GmbH & Co. KG, in Baden-Württemberg: Vodafone BW GmbH, alle Aachener Straße 746–750, 50933 Köln, in den übrigen Bundesländern: Vodafone Kabel Deutschland GmbH, Betastraße 6-8, 85774 Unterföhring<br>`,
-        url: "/internet-phone-1000",
+        recommended: true,
+        legaltext:
+          '<h3 class="h3 legal-dialog-header">Rechtliche Hinweise für Red Internet & Phone 250</h3><br>Ab dem 7. Monat gilt der Preis von 39,99 € pro Monat. Mindestlaufzeit 24 Monate. Verlängerung um je 12 Monate, wenn nicht 3 Monate vor Laufzeitende in Textform gekündigt wurde. Aktivierungsgebühr 69,99 €. Festnetz-Flat ins deutsche Festnetz. Sonderrufnummern sind von der Festnetz-Flat ausgenommen. Telefonate in alle deutschen Mobilfunknetze 19,9 Ct/Min, Telefonate ins Ausland, z. B. USA, ab 9,9 Ct/Min. Call-by-Call und Preselection nicht verfügbar. Du bekommst den erforderlichen WLAN-Kabelrouter für den Zeitraum Deines Vertrags zur Verfügung gestellt. Nach Vertragsende ist der Kabel-Router zurückzugeben. Gilt nur für Internet & Phone-Neukunden, in deren Haushalt in den letzten 3 Monaten weder ein Internet- noch ein Telefonanschluss von Vodafone vorhanden war. Internet & Phone-Produkte sind in vielen unserer Kabel-Ausbaugebiete und mit modernisiertem Hausnetz verfügbar. Prüf bitte, ob das Produkt bei Dir verfügbar ist.',
+        url: "/internet-phone-250",
         pib:
-          "//www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/global/pdf/pib/PIB_Red-Internet-&-Phone-1000-Cable-U.pdf",
+          "//www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/global/pdf/pib/PIB_Red-Internet-&-Phone-250-Cable-U.pdf",
         options: [
-          "Telefon_Komfort_1",
-          "Security-Package_1",
-          "Euro_Flat_1",
-          "Mob_Euro_Flat_1",
-          "International_Flat_1",
-          "International_Allnet_1"
-        ],
-        effectivePrice: 40.4,
-        billType: "Online-Rechnung",
-        contractCancellation: 3,
-        contractPrerequisites:
-          "Kein Kabelanschluss-Vertrag notwendig, es muss nur ein Kabel-Anschluss an Deinem Wohnort verfügbar sein."
+          {
+            title: "Internet-Optionen",
+            skus: ["Telefon_Komfort_1", "Power_Upload_1", "Security-Package_1"]
+          },
+          {
+            title: "Telefon-Optionen",
+            skus: [
+              "Telefon_Komfort_1",
+              "Euro_Flat_1",
+              "Mob_Euro_Flat_1",
+              "International_Flat_1",
+              "International_Allnet_1"
+            ]
+          }
+        ]
       },
       {
-        set: "3play",
-        title: "Red Internet & Phone 50 Cable + Horizon TV",
-        skus: ["2P_RIP_50_1", "HRZ_TV_0420_1"],
+        set: "2play",
+        title: "Red Internet & Phone 100",
+        skus: ["2P_RIP_100_1"],
         upfront_price: 69.99,
-        monthly_price: 24.98,
-        monthOfPriceChange: 13,
-        productrateplans: 39.98, // Besit
+        monthly_price: 19.99,
+        monthOfPriceChange: 7,
+        productrateplans: 34.99, // Besit
+        contract_duration: 24,
+        online_advantage: 120,
+        download: "100",
+        upload: "10",
+        deliveryfee: 0,
+        recommended: false,
+        legaltext:
+          '<h3 class="h3 legal-dialog-header">Rechtliche Hinweise für Red Internet & Phone 100</h3><br>Ab dem 7. Monat gilt der Preis von 34,99 € pro Monat. Mindestlaufzeit 24 Monate. Verlängerung um je 12 Monate, wenn nicht 3 Monate vor Laufzeitende in Textform gekündigt wurde. Aktivierungsgebühr 69,99 €. Festnetz-Flat ins deutsche Festnetz. Sonderrufnummern sind von der Festnetz-Flat ausgenommen. Telefonate in alle deutschen Mobilfunknetze 19,9 Ct/Min, Telefonate ins Ausland, z. B. USA, ab 9,9 Ct/Min. Call-by-Call und Preselection nicht verfügbar. Du bekommst den erforderlichen WLAN-Kabelrouter für den Zeitraum Deines Vertrags zur Verfügung gestellt. Nach Vertragsende ist der Kabel-Router zurückzugeben. Gilt nur für Internet & Phone-Neukunden, in deren Haushalt in den letzten 3 Monaten weder ein Internet- noch ein Telefonanschluss von Vodafone vorhanden war. Internet & Phone-Produkte sind in vielen unserer Kabel-Ausbaugebiete und mit modernisiertem Hausnetz verfügbar. Prüf bitte, ob das Produkt bei Dir verfügbar ist.',
+        url: "/internet-phone-100",
+        pib:
+          "//www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/global/pdf/pib/PIB_Red-Internet-&-Phone-100-Cable-U.pdf",
+        options: [
+          {
+            title: "Internet-Optionen",
+            skus: ["Telefon_Komfort_1", "Security-Package_1"]
+          },
+          {
+            title: "Telefon-Optionen",
+            skus: [
+              "Telefon_Komfort_1",
+              "Euro_Flat_1",
+              "Mob_Euro_Flat_1",
+              "International_Flat_1",
+              "International_Allnet_1"
+            ]
+          }
+        ]
+      },
+      {
+        set: "2play",
+        title: "Red Internet & Phone 50",
+        skus: ["2P_RIP_50_1"],
+        upfront_price: 69.99,
+        monthly_price: 19.99,
+        monthOfPriceChange: 25,
+        productrateplans: 29.99,
         contract_duration: 24,
         online_advantage: 30,
         download: "50",
         upload: "5",
         deliveryfee: 0,
         legaltext:
-          '<h3 class="h3 legal-dialog-header">Rechtliche Hinweise für Red Internet & Phone 50 + Horizon TV</h3><br>Der Preis setzt sich zusammen aus dem Red Internet & Phone 50 Cable (19,99 € pro Monat die ersten 24 Monate, danach 29,99 € pro Monat) und dem Preis für Horizon TV (4,99 € pro Monat die ersten 12 Monate, danach 9,99 € pro Monat). Bei Beendigung des Vertrags über das Internet & Phone Produkt gilt der reguläre monatliche Preis in Höhe von 14,99 € für Horizon TV.) Mindestlaufzeit 24 Monate. Verlängerung um je 12 Monate, wenn nicht 3 Monate vor Laufzeitende in Textform gekündigt wurde. Einmalige Aktivierungsgebühr 69,99 €. Voraussetzung für Horizon TV ist ein Kabelanschlussvertrag von Vodafone (z.B. im Einzelnutzervertrag 20,99€ pro Monat oder oft in den Mietnebenkosten enthalten). Festnetz-Flat ins deutsche Festnetz. Sonderrufnummern sind von der Festnetz-Flat ausgenommen. Telefonate in alle deutschen Mobilfunknetze 19,9 Ct/Min, Telefonate ins Ausland, z. B. USA, ab 9,9 Ct/Min. Call-by-Call und Preselection nicht verfügbar. Du bekommst den erforderlichen WLAN-Kabelrouter für den Zeitraum Deines Vertrags zur Verfügung gestellt. Nach Vertragsende ist der Kabel-Router zurückzugeben. Gilt nur für Internet & Phone-Neukunden, in deren Haushalt in den letzten 3 Monaten weder ein Internet- noch ein Telefonanschluss von Vodafone vorhanden war. Internet & Phone-Produkte sind in vielen unserer Kabel-Ausbaugebiete und mit modernisiertem Hausnetz verfügbar. Prüf bitte, ob das Produkt bei Dir verfügbar ist. ',
-        url: "/internet-phone-tv-50",
+          '<h3 class="h3 legal-dialog-header">Rechtliche Hinweise für Red Internet & Phone 50</h3><br>Ab dem 25. Monat gilt der Preis von 29,99 € pro Monat. Mindestlaufzeit 24 Monate. Verlängerung um je 12 Monate, wenn nicht 3 Monate vor Laufzeitende in Textform gekündigt wurde. Aktivierungsgebühr 69,99 €. Festnetz-Flat ins deutsche Festnetz. Sonderrufnummern sind von der Festnetz-Flat ausgenommen. Telefonate in alle deutschen Mobilfunknetze 19,9 Ct/Min, Telefonate ins Ausland, z. B. USA, ab 9,9 Ct/Min. Call-by-Call und Preselection nicht verfügbar. Du bekommst den erforderlichen WLAN-Kabelrouter für den Zeitraum Deines Vertrags zur Verfügung gestellt. Nach Vertragsende ist der Kabel-Router zurückzugeben. Gilt nur für Internet & Phone-Neukunden, in deren Haushalt in den letzten 3 Monaten weder ein Internet- noch ein Telefonanschluss von Vodafone vorhanden war. Internet & Phone-Produkte sind in vielen unserer Kabel-Ausbaugebiete und mit modernisiertem Hausnetz verfügbar. Prüf, ob das Produkt bei Dir verfügbar ist.',
+        url: "/internet-phone-50",
         pib:
           "//www.unitymedia.de/content/dam/dcomm-unitymedia-de/vodafone/Privatkunden/global/pdf/pib/PIB_Red-Internet-&-Phone-50-Cable-U.pdf",
         options: [
