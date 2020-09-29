@@ -26,16 +26,24 @@
         class="close-button"
         @click="$store.commit('setOverlayContent', { headline: '', copy: '' })"
       />
-      <tarif-recommendation />
+      <div class="desktop-view">
+        <tarif-recommendation />
+      </div>
+      <div class="mobile-view">
+        <tarif-recommendation-mobile-view />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import tarifRecommendation from "@/components/organisms/tarifRecommendation.vue";
+import tarifRecommendationMobileView from "@/components/organisms/tarifRecommendationMobileView.vue";
+
 export default {
   components: {
-    tarifRecommendation
+    tarifRecommendation,
+    tarifRecommendationMobileView
   },
   computed: {
     headline() {
@@ -92,6 +100,7 @@ export default {
   height: 20px;
   width: 20px;
   cursor: pointer;
+  margin-top: 5px;
 }
 .overlay-container ul li {
   position: relative;
@@ -112,5 +121,24 @@ export default {
   font-family: VodafoneBD;
   font-size: 16px;
   line-height: 24px;
+}
+
+.mobile-view {
+  display: none;
+}
+.desktop-view {
+  display: block;
+}
+@media (max-width: 768px) {
+  .mobile-view {
+    display: block;
+  }
+  .desktop-view {
+    display: none;
+  }
+  .overlay-container .overlay-box {
+    margin: 0;
+    padding: 0;
+  }
 }
 </style>
