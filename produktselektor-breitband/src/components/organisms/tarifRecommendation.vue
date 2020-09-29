@@ -143,13 +143,13 @@ export default {
       let helperProduct = { download: "50" };
       let tempValue = "";
       if (this.deviceCount < 4) {
-        tempValue = this.$store.getters.getBBProducts[0].skus[0];
-      } else if (this.deviceCount < 10) {
-        tempValue = this.$store.getters.getBBProducts[1].skus[0];
-      } else if (this.deviceCount < 15) {
-        tempValue = this.$store.getters.getBBProducts[2].skus[0];
-      } else if (this.deviceCount >= 15) {
         tempValue = this.$store.getters.getBBProducts[3].skus[0];
+      } else if (this.deviceCount < 10) {
+        tempValue = this.$store.getters.getBBProducts[2].skus[0];
+      } else if (this.deviceCount < 15) {
+        tempValue = this.$store.getters.getBBProducts[1].skus[0];
+      } else if (this.deviceCount >= 15) {
+        tempValue = this.$store.getters.getBBProducts[0].skus[0];
       }
       if (tempValue) {
         helperProduct = this.$store.getters.getProduct(tempValue);
@@ -160,11 +160,11 @@ export default {
       let helperProduct = { download: "250" };
       let tempValue = "";
       if (this.deviceCount < 4) {
-        tempValue = this.$store.getters.getBBProducts[1].skus[0];
-      } else if (this.deviceCount < 10) {
         tempValue = this.$store.getters.getBBProducts[2].skus[0];
+      } else if (this.deviceCount < 10) {
+        tempValue = this.$store.getters.getBBProducts[1].skus[0];
       } else if (this.deviceCount >= 10) {
-        tempValue = this.$store.getters.getBBProducts[3].skus[0];
+        tempValue = this.$store.getters.getBBProducts[0].skus[0];
       }
       if (tempValue) {
         helperProduct = this.$store.getters.getProduct(tempValue);
