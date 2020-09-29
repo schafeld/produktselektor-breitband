@@ -77,4 +77,9 @@ h3.customer-type {
 .tab p {
   margin-bottom: 16px;
 }
+@media (max-width: 768px) {
+  .tab {
+    min-width: 200px;
+  }
+}
 </style>
